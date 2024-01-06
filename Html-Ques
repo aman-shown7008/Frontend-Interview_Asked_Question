@@ -28,14 +28,54 @@ _top - Opens the document in the full body of the window
 How can we mail someone if we want to be?
 <a href="mailto:someone@example.com">Send email</a>
 
+What are different types of lists in HTML?
+<p>Unordered List</p>
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
+<p>Ordered List</p>
+<ol>
+   <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ol>
+<p>Description List</p>
+<dl>
+  <dt>Div</dt>
+  <ddgit>This is block level Element</ddgit>
+</dl>
 
+How to optimize website assets loading?
+• Image Compression: Reduce image sizes without compromising quality. Tools like TinyPNG or Squoosh can help.
+• Minify Code: Minimize HTML, CSS, and JavaScript files. Remove unnecessary spaces, comments, and formatting to make them smaller.
+• Use Browser Caching: Set up caching to store static files on a user's browser, reducing the need to download them again. Ex - files like images, CSS stylesheets.
+• Content Delivery Network (CDN): Utilize a CDN to store copies of your site's files across various servers globally, ensuring quicker access for users from different locations.
 
+Please explain how to indicate the character set being used by a document in HTML?
+The character set is defined in <meta> tag inside <head> element.
 
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   ...
+   ...
+ </head>
+ ...
+</html>
+UTF-8 stands for "Unicode Transformation Format - 8-bit." It's a character encoding standard that assigns unique binary codes to every character in most of the world's writing systems.
 
-
-
-
-
+Is it possible to change an inline element into a block level element?
+Yes, it is possible using the “display” property with its value as “block”, to change the inline element into a block-level element.
+HTML- 
+<span class="first">Aman </span>
+<span class="first">Mishra</span>
+CSS- 
+.first{
+  display: block;
+}
 
 
 
