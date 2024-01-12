@@ -174,6 +174,69 @@ Ex- <p class="fi">First</p>
   display: none;
 }
 
+Q. What if we using Depricated features in HTML?
+A. It will not work in some of the browser.
+Compatibility Issues: Future browser updates may choose to drop support for deprecated features, causing your code to break in newer environments.
+Code Quality: Deprecated features are often replaced with more modern and efficient alternatives. Using deprecated features can indicate outdated or less optimal code.
+Maintenance Challenges: As technology evolves, maintaining code that relies on deprecated features becomes more challenging. It might hinder your ability to adapt to new standards and practices.
+Limited Support: Community support for code using deprecated features may be reduced since developers are encouraged to use current and recommended approaches.
+EX - Marquee, menuItem.
+
+Q. What are HTML Entities?
+A. HTML entities are special codes used to represent reserved characters in HTML.
+
+&lt; represents < (less than)
+&gt; represents > (greater than)
+&amp; represents & (ampersand)
+&quot; represents " (double quotation mark)
+&apos; represents ' (apostrophe)
+In this example, HTML entities are used to display angle brackets, double quotes, and an apostrophe within the content of the list items.
+
+Q. How do you insert a copyright symbol in HTML?
+A. You can insert a copyright symbol by using &copy; or &#169; in an HTML file.
+
+Q. What is an Image map?
+A. The idea behind an image map is that you should be able to perform different actions depending on where in the image you click.
+   To create an image map you need an image, and some HTML code that describes the clickable areas.
+
+Q. How do you create nested web pages in HTML?
+A. Nested web pages basically mean a webpage within a webpage. We can create nested web pages in HTML using the built-in iframe tag.
+<iframe src="https://www.w3schools.com/html/html_images_imagemap.asp" height="600" width="800"></iframe>
+
+Q. When to use scripts in the head and when to use scripts in the body?
+A. Scripts can be placed in the <head> section of the HTML document or in the <body> section. 
+   Scripts that must be executed before the page is displayed, such as scripts that define variables or functions, should be placed in the <head> section.
+   Scripts that must be executed after the page is displayed, such as scripts that manipulate the DOM, should be placed in the <body> section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
