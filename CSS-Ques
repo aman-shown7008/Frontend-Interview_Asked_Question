@@ -1,25 +1,82 @@
-What are Pseudo elements and Pseudo classes?
-Pseudo-elements allows us to create items that do not normally exist in the document tree, for example ::after.
+1. What are Pseudo elements and Pseudo classes?
+A. Pseudo-elements allows us to create items that do not normally exist in the document tree, for example ::after.
+  ::before
+  ::after
+  ::first-letter
 
-::before
-::after
-::first-letter
+  Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.
+ :link
+ :visited
+ :hover
+ :active
+ :focus
 
-Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.
 
-:link
-:visited
-:hover
-:active
-:focus
+2. Explain me Different Box Sizing Property?
 
-Explain me Different Box Sizing Property?
+A. Here's how it affects layout:
+•  When using box-sizing: content-box, if you set a width of, say, 300px on an element and add 20px padding, the total width will be 320px (300px + 20px padding on each side).
+•  When using box-sizing: border-box, if you set a width of 300px on an element with 20px padding, the total width will remain 300px. The padding will be included within the specified width.
 
-Here's how it affects layout:
 
-When using box-sizing: content-box, if you set a width of, say, 300px on an element and add 20px padding, the total width will be 320px (300px + 20px padding on each side).
-When using box-sizing: border-box, if you set a width of 300px on an element with 20px padding, the total width will remain 300px. The padding will be included within the specified width.
-
-6. Difference between grid and flex?
+3. Difference between grid and flex?
 CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows. Grid layout is intended for larger-scale layouts which aren’t linear in design.
 Flexbox is largely a one-dimensional system (either in a column or a row). Flexbox layout is most appropriate to the components of an application.
+
+
+4. What is the difference between inline, inline-block, and block?
+A. Display Property: display: inline;
+   Description: Elements are rendered on the same line as adjacent content. They only take up as much width as necessary and do not start on a new line.
+
+   Display Property: display: inline-block;
+   Description: Elements are rendered as inline, but they can have block-level properties like width and height. They sit on the same line, but you can control their dimensions.
+
+   Display Property: display: block;
+   Description: Elements start on a new line and take up the full width available. They stack on top of each other, creating a block-level box.
+Ex- <h2>HTML Iframes example</h2>
+    <h2>Iframes example</h2>
+
+    h2{
+      display: block;
+      background-color: blue;
+    }
+
+
+5. How do you specify units in the CSS? What are the different ways to do it?
+A. There are mainly four different units in the CSS that are px, em, pt, and percentage (%).
+
+•  Px (Pixel) is used for fine-grained control and alignment and not cascade. To get it sharp, we can use 1px or multiple of px.
+•  Em is used to maintain relative size and responsive fonts. 1em = 16px having also the same font size. It is advisable to set the font size to 10px in common practice.
+•  Pt (point) is a fixed-size unit that is used in print. 1pt = 1/72 inch.
+•  Percentage (%) is used to set the font size with respect to the font size of the body. Thus, it is necessary to set the reasonable font size of the body.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
