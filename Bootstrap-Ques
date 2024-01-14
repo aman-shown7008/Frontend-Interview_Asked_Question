@@ -1,20 +1,23 @@
 1. What is Bootstrap?
 A. Bootstrap is a free, open-source framework for front-end development. It's used to create responsive websites and web apps.
-   Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites, , tablets, and desktops.
+   Bootstrap is the most popular CSS Framework for developing responsive for mobile-first websites, tablets, and desktops.
    Bootstrap 5 is the newest version of Bootstrap.
 
 
 2. What is a Bootstrap Container, and how does it work?
 A. There are two types of containers:
 
-The .container class creates a fixed-width container that is responsive.
-The .container-fluid class creates a full-width container that spans the entire viewport width.
+The [.container] class creates a fixed-width container that is responsive.
+The [.container-fluid] class creates a full-width container that spans the entire viewport width.
 There are two types of containers:
 
 • .container class creates a fixed-width container that is responsive.
 • The .container-fluid class creates a full-width container that spans the entire viewport width.
 
 
+3. What is a breadcrumb in Bootstrap?
+A. In Bootstrap, a breadcrumb is a navigation element that provides users with a visual trail of the hierarchy or path of the current page within a website.
+   From one page to another.
 
 
 
