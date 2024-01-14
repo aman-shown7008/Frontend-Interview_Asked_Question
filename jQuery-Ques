@@ -1,0 +1,69 @@
+1. What is jQuery? And use of it
+A. jQuery is a JavaScript library that makes it easy to create dynamic web pages. It helps in making web apps more efficient and interactive. 
+   It can be applied to the development of interactive websites that are simple to use and navigate. It also makes it easy to add animations and transitions to your pages. With the help of jQuery, you can perform many basic activities that would otherwise require numerous lines of JavaScript code by calling methods instead.
+
+2. Tell me difference between Static and Dynamic Web Appliction?
+A. Staic web Appliction-
+   A static web page refers to a web page that displays fixed content and remains the same for all users. The content of a static web page is typically written in HTML (Hypertext Markup Language) and does not change based on user interactions or other external factors. 
+   Examples of Static Web Page :
+•  It include informational websites, personal blogs, portfolios, and landing pages where the content doesn't change frequently by the user
+
+   A dynamic web page refers to a web page that is capable of changing its content and appearance in response to user interactions or other events
+   Examples of Dynamic Web Page :
+
+•  Social media feeds that update in real-time.
+•  Interactive forms that validate user input on the fly.
+•  E-commerce websites that display personalized product recommendations.
+•  Chat applications that allow users to send and receive messages without refreshing the entire page.
+
+3. What is the difference between javascript and jquery?
+A. JavaScript is an interpreted language written in C and is a combination of ECMAScript and DOM whereas jQuery is a JavaScript library developed to run things faster and make things simplified for JavaScript. jQuery doesn't have the ECMAScript.
+•  JavaScript requires long lines of code to code a functionality whereas in the case of jQuery, just import the library and call the functions which would reduce the programmer’s effort in coding.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
