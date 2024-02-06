@@ -1,0 +1,44 @@
+🚀 React Basics:
+
+⚛️ ReactJs
+⚛️ Features of React
+⚛️ JSX
+⚛️ Virtual DOM in React
+⚛️ Working of Virtual DOM in React
+⚛️ React Fiber
+⚛️ Advantages of React
+⚛️ why className instead of class in React
+
+🎨 React State & Events:
+
+⚛️ Element vs Component in React
+⚛️ Pure Components in React
+⚛️ State in React
+⚛️ Props in React
+⚛️ State vs Props in React
+⚛️ Synthetic Events in React
+⚛️ Controlled Components in React
+⚛️ Uncontrolled Components in React
+⚛️ Events in React
+⚛️ Stateless Components in React
+⚛️ Stateful Component in React
+⚛️ Using setState() in componentWillMount()
+⚛️ Lifting State Up in React
+⚛️ Mounting methods in React
+
+⚙️ React Optimization:
+
+⚛️ Use of Refs in React
+⚛️ Hooks Replacing Render Props and Higher Order Components
+⚛️ useEffect in React
+⚛️ useRef in React
+⚛️ useMemoize in React
+⚛️ useCallback in React
+
+🌐 React Context:
+
+⚛️ Context in React
+⚛️ Children Props in React
+⚛️ Redux vs useContext
+⚛️ Redux vs React Context
+⚛️ React Redux vs React's Context API
