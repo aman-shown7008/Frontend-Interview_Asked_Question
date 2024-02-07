@@ -1,17 +1,26 @@
 1. What is ReactJS?
 A. ReactJS is a JavaScript library for building user interfaces and allows developers to the creation of simple, fast, and scalable web applications.
-Ex - 
-Component-Based Architecture:
-React organizes UI into reusable components, allowing developers to break down complex UIs into smaller, manageable pieces.
-Components can be easily reused across the application, enhancing maintainability and scalability.
-Header Component: Contains the logo, navigation links, and maybe user profile info.
-Sidebar Component: Displays relevant shortcuts or additional navigation.
-Main Content Component: Shows the main content of the page.
-Footer Component: Includes copyright info, links, etc.
+Ex - Component-Based Architecture:
+•  React organizes UI into reusable components, allowing developers to break down complex UIs into smaller, manageable pieces.
+•  Components can be easily reused across the application, enhancing maintainability and scalability.
+•  Header Component: Contains the logo, navigation links, and maybe user profile info.
+•  Sidebar Component: Displays relevant shortcuts or additional navigation.
+•  Main Content Component: Shows the main content of the page.
+•  Footer Component: Includes copyright info, links, etc.
 
-Virtual DOM:
-React uses a virtual representation of the DOM, which allows it to efficiently update only the necessary parts of the actual DOM when data changes.
-This minimizes re-rendering, boosts performance, and results in faster updates for the user interface.
+
+Q. How to create a React App?
+A. npx create-react-app first-proj
+   NPX is package runner & its getting download when we download node.js.
+
+
+Q. What is difference b/w Class Components and Functional Components?
+A. 
+
+
+2. Difference betweeb DOM and Virtual DOM?
+A. React uses a virtual representation of the DOM, which allows it to efficiently update only the necessary parts of the actual DOM when data changes.
+   This minimizes re-rendering, boosts performance, and results in faster updates for the user interface.
 
 Declarative Syntax:
 The declarative nature of React simplifies the process of creating UIs by specifying what the UI should look like based on the application state, rather than how to change the DOM.
