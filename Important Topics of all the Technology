@@ -24,7 +24,8 @@
 ⚛️ Stateful Component in React
 ⚛️ Using setState() in componentWillMount()
 ⚛️ Lifting State Up in React
-⚛️ Mounting methods in React
+⚛️ Lifecycle methods
+⚛️ Data Binding
 
 ⚙️ React Optimization:
 
