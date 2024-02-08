@@ -62,3 +62,26 @@ Ex- const element = document.createElement('h1');
     document.getElementById('root').appendChild(element);
 
 
+
+----REACT-HOOKS----
+1. UseState Hooks -
+A. The useState hook in React is a fundamental tool for adding stateful behavior to functional components, simplifying component logic, and promoting cleaner 
+   and more maintainable code. If we want to play with our UI & Want some data to get store somewhere so then we can use UseState hook.
+EX- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FuseState.jsx%3A29%2C16
+
+
+2. UseEffect Hooks -
+A. When our component is going to be Render first time OR If there is some update in our component. Then useEffect is going to be called.
+   When we use useEffect then we are requesting react to execute function every time when our componenets render.
+   Its close replacement of a componentDidMount, componentDidUpdate and componentWillUnmount.
+
+
+
+
+
+
+
+
+
+
+
