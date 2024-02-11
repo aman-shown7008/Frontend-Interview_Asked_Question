@@ -92,6 +92,15 @@ USE - It is used for Data Fetching, DOM Manipulation, Managing Timers, Event Lis
 Ex- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseEffect%2FUseEffect.jsx%3A1%2C8-1%2C20
 
 
+3. UseMemo Hooks - 
+A. The useMemo hook helps to optimize performance by remembering or caching the result of a function so that it doesn't recompute the result unless the state change. This can be particularly useful when dealing with expensive calculations or complex data processing in your React components, as it helps prevent unnecessary recalculations and renders.
+
+USE - Sometimes we are changing some states of component and at the same time some unwanted function are also called & we do not want them to be run at that time we can use UseMemo. Because if that function is very and we unwanted calling him again and again so there will be performance issue OR it will take so much time to reload a component. 
+Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseMemo%2FUseMemo.jsx%3A14%2C5
+
+
+4. UseContext Hooks - 
+A. 
 
 
 
