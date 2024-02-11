@@ -100,9 +100,20 @@ Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseMem
 
 
 4. UseContext Hooks - 
+A. The useContext hook allows a functional component to access data from a parent component and share it with deeply nested child components without the need to pass data through each intermediate component.
+
+USE - The useContext hook in React has resolved the problem of prop drilling, which occurs when you need to pass data through multiple layers of components in order to reach a deeply nested component that requires access to that data.
+      By using useContext, you can access shared data or state directly in any component without the need to pass it down through intermediate components, thus simplifying the component hierarchy and making the codebase cleaner and more maintainable.
+
+Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseContext%2FUseContext.jsx%3A11%2C17
+
+
+5. 
 A. 
 
+USE - 
 
+Ex - 
 
 
 
