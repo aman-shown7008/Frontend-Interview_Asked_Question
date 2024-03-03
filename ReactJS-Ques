@@ -1,7 +1,11 @@
 1. What is ReactJS?
 A. ReactJS is a JavaScript library for building user interfaces and allows developers to the creation of simple, fast, and scalable web applications.
+   ReactJS Current version - 18.2.0.
+   It is maintained by Facebook.
+   Its First Release was 29 May 2013.
 Ex - Component-Based Architecture:
 •  React organizes UI into reusable components, allowing developers to break down complex UIs into smaller, manageable pieces.
+•  It is a Single Page Application. means - [ It loaded whole website in singel time & If we want to navigate to different page we can easily navigate without loading. ]
 •  Components can be easily reused across the application, enhancing maintainability and scalability.
 •  Header Component: Contains the logo, navigation links, and maybe user profile info.
 •  Sidebar Component: Displays relevant shortcuts or additional navigation.
