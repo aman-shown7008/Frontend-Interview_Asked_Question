@@ -152,12 +152,17 @@ A. Reconciliation is the process through which React updates the Browser DOM and
 
 Q. What are fragments and Use-Case?
 A. It's a common pattern or practice in React for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM. You need to use either or a shorter syntax having empty tag (<></>).
+ 
+   Use case:
    Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
 
 
 
+Q. What are error boundaries and Use-Case?
+A. Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application. They provide a way to gracefully handle errors that occur during rendering, lifecycle methods, or event handlers within a component subtree. Error boundaries are defined using the componentDidCatch lifecycle method.
 
-
+  Use case:
+  Imagine you have a complex application with various components rendering data fetched from an API. If an unexpected error occurs in one of these components, it could cause the entire application to crash, leading to a poor user experience. By wrapping parts of your application with error boundaries, you can isolate errors to specific components and display a user-friendly error message instead of crashing the entire app. This enhances the resilience and stability of your application, allowing users to continue using unaffected parts of the UI even if errors occur elsewhere.
 
 
 
