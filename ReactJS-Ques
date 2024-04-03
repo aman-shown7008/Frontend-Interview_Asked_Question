@@ -131,3 +131,13 @@ Q. What are Life Cycle methods and USES?
 A. 
 
 
+
+Q. What are difference between DOM events and Synthetic events with Use-Case?
+A. DOM Events:
+   DOM events are native browser events that occur when a user interacts with a web page. Examples include click, mouseover, keydown, etc. In React, you can attach event handlers directly to DOM elements using JSX syntax.
+
+   Synthetic Events:
+   React provides its own event system called Synthetic Events. These events are implemented to ensure consistent behavior across different browsers. They wrap the native DOM events and provide additional features and cross-browser compatibility. They behave identically to native events but are instances of SyntheticEvent. 
+
+•  Cross-Browser Compatibility: Developers would need to write code to handle the differences between how events are handled in different browsers. This would require additional testing and could lead to inconsistencies in behavior across browsers.
+•  Performance: Managing event listeners directly on DOM elements can be less efficient than React's event delegation model. Each event listener adds overhead, especially in applications with many interactive elements. Without the optimization provided by Synthetic Events, performance could suffer, especially in complex applications.
