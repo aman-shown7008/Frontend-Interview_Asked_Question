@@ -166,9 +166,12 @@ A. Error boundaries are React components that catch JavaScript errors anywhere i
 
 
 
-
-
-
+Q. What is React Router?
+A. React Router is a popular routing library for React applications that allows you to handle navigation and URL changes in a single-page application (SPA). It enables you to define routes, map them to specific components, and handle navigation between different views without requiring a page reload.
+   React Router v4 provides below 3 <Router> components:
+1. <BrowserRouter>
+2. <HashRouter>
+3. <MemoryRouter>
 
 
 
