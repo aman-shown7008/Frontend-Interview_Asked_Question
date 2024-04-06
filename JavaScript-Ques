@@ -22,6 +22,106 @@ Q. What is Hoisting? Use of it.
 A. Mechanism in JS where the variable declarations are moved to the top of the scope before execution. Therefore it is possible to call a function before initializing it.
 •  Function Declarations: Hoisting allows you to use a function before it's declared in the code. This is particularly useful when you define functions at the bottom of your script but want to use them at the top.
 •  Variable Declarations: Similarly, hoisting allows you to reference variables before they are declared. However, only the declarations are hoisted, not the initializations. This means the variable exists but is undefined until it's assigned a value.
+•  In JS, before the code is executed, the variables get initialized to undefined.
+•  Arrow functions enact as variables and get "undefined" during the memory creation phase while functions actually get run.
+•  Whenever a JS program is run, a global execution block is created, which comprises of 2: Memory creation and Code execution.
+
+
+
+Q. How functions work and excuted in JavaScript?
+A. 1. We learnt how functions work in JS.
+2. At first a global execution context is created, which consists of Memory and code and has 2 phases: Memory allocation phase and code execution phase.
+3. In the first phase, the variables are assigned "undefined" while functions have their own code.
+4. Whenever there is a function declaration in the code, a separate local execution context gets created having its own phases and is pushed into the call stack.
+5. Once the function ends, the EC is removed from the call stack.
+6. When the program ends, even the global EC is pulled out of the call stack.
+
+
+
+Q. What is difference between undefined and not defined in JS?
+A. Undefined - is a Special Placeholder which is used to reserve memory for the variables in the memory creation phase. Even before a single line of code is executed JS engine assigns undefined to the variables.
+   Ex - var x;
+        console.log(x); // Output: undefined
+
+   Not Defined means - If we try to console or access any variable which is not declared in the code then we get Not Defined error.
+   Ex - // Not defined variable
+        console.log(y); // Output: ReferenceError: y is not defined
+
+
+
+Q. What is Scope Chain, Scope & Lexical Environment? And how they work in JS engine?
+A. 1. Scope of a variable is directly dependent on the lexical environment.
+2. Whenever an execution context is created, a lexical environment is created. Lexical environment is the local memory along with the lexical environment of its parent. Lexical as a term means in hierarchy or in sequence.
+3. Having the reference of parent's lexical environment means, the child or the local function can access all the variables and functions defined in the memory space of its lexical parent.
+4. The JS engine first searches for a variable in the current local memory space, if its not found here it searches for the variable in the lexical environment of its parent, and if its still not found, then it searches that variable in the subsequent lexical environments, and the sequence goes on until the variable is found in some lexical environment or the lexical environment becomes NULL.
+5. The mechanism of searching variables in the subsequent lexical environments is known as Scope Chain. If a variable is not found anywhere, then we say that the variable is not present in the scope chain.
+
+
+Q. What is block and block scope in JS? Use of it.
+A. 1. Code inside curly bracket is called block.
+2. Multiple statements are grouped inside a block so it can be written where JS expects single statements like in if, else, loop, function etc.
+3. Block values are stored inside separate memory than global. They are stored in block. (the reason let and const are called block scope)
+4. Shadowing of variables using var, let and const.
+5. The shadow should not cross the scope of original otherwise it will give error.
+6. shadowing let with var is illegal shadowing and gives error.
+7. var value is stored in nearest outer function or global scope and hence can be accessed outside block as well whereas same is not the case with let and const.
+
+
+
+Q. Tell me difference b/w var, let and const?
+A. Var -
+•  We can get value of [ var a = 9 ] before intialization of value becz its value is stores in Global EC.
+   console.log(a);
+   var a = 9;
+•  We can create same variable name with different intialization value and it will give last intialised.
+   var a = 7;
+   var a = 9; 
+   console.log(a); // Output 9 [ Value stores Globally ]
+•  We can also access var if we have intialised value in a block scope.
+   {
+      var a = 9;
+   }
+   console.log(a); // Output 9 [ Value stores Globally ]
+
+2. Let - 
+•  We can not get value before intialization of it becz value stores at separete memory in Script.
+   console.log(a); // Output [ Uncaught ReferenceError: cannot access 'a' before intialization. ]
+   let a = 9;
+•  We can not redeclare a value with the same name.
+   let a = 9;
+   let a;
+   a = 8;
+   console.log(a); //Output [ Uncaught SyntaxError: Identifier 'a' has already been declared. ]
+•  When we declare a value in block scope. So we can not access it becz value stores at separete memory in block.
+   {
+       let a = 8;
+   }
+   console.log(a); //Output [ Uncaught ReferenceError: a is not defined ]
+
+3. Const - 
+•  We can not get value before intialization of it becz value stores at separete memory in Script.
+   console.log(a); // Output [ Uncaught ReferenceError: cannot access 'a' before intialization. ]
+   const a = 9;
+•  We have to intialize value in same line where we have decalared a value and we can not redeclare a value with same name.
+   const a;
+   a = 8;
+   console.log(a); //Output [ Uncaught SyntaxError: Missing initializer in const declaration. ]
+•  When we declare a value in block scope. So we can not access it becz value stores at separete memory in block..
+   {
+       const a = 8;
+   }
+   console.log(a); //Output [ Uncaught ReferenceError: a is not defined ]
+
+•  Important Scenario - 
+1. let and const are hoisted but its memory is allocated at other place than window which cannot be accessed before initialisation.
+2. Temporal Dead Zone exists until variable is declared and assigned a value.
+3. window.variable OR this.variable will not give value of variable defined using let or const.
+4. We cannot redeclare the same variable with let/const(even with using var the second time).
+5. const variable declaration and initialisation must be done on the same line.
+6. There are three types of error: [1] referenceError {given where variable does not have memory allocation} [2] typeError {given when we change type that is not supposed to be changed} [3] syntaxError {when proper syntax(way of writing a statement) is not used}.
+7. Use const wherever possible followed by let, Use var as little as possible(only if you have to). It helps avoid error.
+8. Initialising variables at the top is good idea, helps shrinks TDZ to zero.
+
 
 
 
