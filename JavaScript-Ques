@@ -124,5 +124,19 @@ A. Var -
 
 
 
+Q What is Callback Function?
+A 
+  function calledFunc(callback){
+    console.log('Performing Some task');
+    
+    setTimeout(function(){
+        console.log("Second");
+        callback();
+    }, 1000);
+  }
 
+  function callback(){
+    console.log("callback Func");
+  }
+  calledFunc(callback);
 
