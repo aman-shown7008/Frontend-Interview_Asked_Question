@@ -2,9 +2,9 @@ Q. Short Commandes-
 •  ng new first-proj [ To create a Project ]
 •  code first-proj [ To open in VS Code ]
 •  ng serve [ To run a Project on server ]
-•  
-•  
-•  
+•  ng generate component login [ To create a component ]
+•  ng generate module auth-in [ To create a module ]
+•  ng g c auth-in/sign-out [ To create a component under module ]
 •  
 •  
 •  
@@ -22,3 +22,35 @@ Q. Uses of File in Angular -
 •  tsconfig.app.json - It allows you to customize TypeScript compiler options for your Angular application, such as target version, module resolution, strictness, and other settings, ensuring TypeScript compiles your application code according to your requirements.
 •  tsconfig.json - This file helps ensure consistency and control over how TypeScript code is transpiled into JavaScript within your Angular project.
 •  tsconfig.spec.json - This file helps ensure that unit tests run smoothly and accurately during development.
+
+
+
+Q. What is angular & Why we use it?
+A. Angular is a popular front-end web framework developed by Google, used to build dynamic and interactive single-page web applications (SPAs)
+   It provides a structured framework for organizing and building client-side applications using HTML, CSS, and TypeScript.
+   Angular offers features like two-way data binding, dependency injection, routing, and components, making it easier to develop complex web applications with maintainable code. 
+
+
+
+Q. What is Interpolation? Why we use it?
+A. Interpolation in Angular is a way to display dynamic data in the HTML template by binding expressions directly into the markup. It's denoted by double curly braces {{ }}. 
+   For example- <h1 class="{{title}}">Hello Angular {{title}}</h1>
+
+   Use-
+   We can do the concatenation, arthmatic Operation, can see value of key.
+   Don't-
+   We can't do comparison, typeOf("Hello"), increment & decrement, new keyword.
+
+
+
+Q. What is CLI & Why we use it?
+A. We use the Angular CLI to streamline the development process. It provides a set of commands that automate common tasks, such as generating components, services, modules, and more.
+   Additionally, the CLI handles project configuration, builds, testing, and deployment, simplifying the setup and maintenance of Angular applications.
+
+
+
+
+
+
+
+
