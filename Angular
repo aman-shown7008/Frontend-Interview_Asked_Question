@@ -1,1 +1,24 @@
+Q. Short Commandes-
+•  ng new first-proj [ To create a Project ]
+•  code first-proj [ To open in VS Code ]
+•  ng serve [ To run a Project on server ]
+•  
+•  
+•  
+•  
+•  
+•  
 
+
+
+Q. Uses of File in Angular -
+•  src/app- All code is present over here for the Development.
+•  src/assests - To store images, extra file.
+•  src/index.html - This file is loaded firstly when we run our Project.
+•  src/main.ts - This file is used connect html to angular Or Put all angular code under html to run .
+•  package.json - Puts all the detailes i.e [packages, version, command ] used in Project.
+•  package-lock.json - It puts detailed about every packages used & each packages needs internally how many packages to run.
+•  angular.json -  It stores essential configurations like how your project should be built, where assets are located, and how environments are set up. It's like the blueprint guiding the Angular CLI on how to assemble and run your application. 
+•  tsconfig.app.json - It allows you to customize TypeScript compiler options for your Angular application, such as target version, module resolution, strictness, and other settings, ensuring TypeScript compiles your application code according to your requirements.
+•  tsconfig.json - This file helps ensure consistency and control over how TypeScript code is transpiled into JavaScript within your Angular project.
+•  tsconfig.spec.json - This file helps ensure that unit tests run smoothly and accurately during development.
