@@ -5,9 +5,9 @@ Q. Short Commandes-
 •  ng generate component login [ To create a component ]
 •  ng generate module auth-in [ To create a module ]
 •  ng g c auth-in/sign-out [ To create a component under module ]
-•  
-•  
-•  
+•  ng g c user-list --inline-style [ To implement CSS  under .ts file by not creating CSS seprate file. ]
+•  ng g c student-list --inline-template [ To implement a HTML under .ts file by not creating HTML seprate file. ]
+•  ng g c count-list --inline-style --inline-template [ To implement HTML & CSS both in .ts file ]
 
 
 
