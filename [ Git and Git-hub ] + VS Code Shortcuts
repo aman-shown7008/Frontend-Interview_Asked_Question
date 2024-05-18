@@ -3,11 +3,21 @@ A. git config --global user.name "Aman mishra" - [ Your Name ]
    git config --global user.email amanmishra80045@gmail.com - [ Register email ]
    git config --list - [ To see all details ] 
 
+
+
+
 Q. If you want to take Update/Pull in Project?
-A. Give command - Check - git status/git flow init/git pull
+A. Give command - Check - git status/git flow init/git pull.
 
 
 
+Q. Basics command - 
+•  cd  - Change directory - [ Go under a Folder ].
+•  cd.. - [ Get out of Directory ].
+•  clear - [ Clear a Terminal ].
+•  ls - Listing - [ To see all folders & files ].
+•  ls -a - [ To see all hidden files and folders ].
+•  mkdir - Make directory - [ To create folder ].
 
 
 VS Code Shortcuts-
