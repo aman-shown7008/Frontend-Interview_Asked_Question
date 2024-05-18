@@ -22,6 +22,9 @@ A. git add file_name - [ It prepares your changes to be committed by moving them
 
 
 
+Q. If we want to make Copy/Clone of some folder/repository.
+A. git clone link - [ This is used to make copy of online repository ].
+
 Q. Use of [ git status ] command.
 A. By this we can see our files OR folders in which we are working is up to date from where that code is placed/hosted.
 •  Untracked - When we have added some file in our code but not hosted on github.
