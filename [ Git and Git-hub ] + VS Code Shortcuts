@@ -25,12 +25,31 @@ A. git add file_name - [ It prepares your changes to be committed by moving them
 Q. If we want to make Copy/Clone of some folder/repository.
 A. git clone link - [ This is used to make copy of online repository ].
 
+
+
 Q. Use of [ git status ] command.
 A. By this we can see our files OR folders in which we are working is up to date from where that code is placed/hosted.
 •  Untracked - When we have added some file in our code but not hosted on github.
 •  Modified - When we have some changes in our files.
 •  Staged - File/Folder ready to be commit.
 •  Unmodified - When there is no changes in our code i.e its exactly same what we download.
+
+
+Q. What is branch? Its command.
+A. It allows you to work on different features or fixes independently from the main codebase.
+•  git branch - [ List all branches ]
+•  git branch -v - [ List all branches with the last commit ]
+•  git branch <branch-name> - [ Create a new branch ]
+•  git branch -d <branch-name> - [ Delete a branch ]
+•  git branch -m <new-branch-name> - [ Rename the current branch ]
+•  git checkout <branch-name>/git switch <branch-name> - [ Switch to a different branch ]
+•  git checkout -b <branch-name>/git switch -c <branch-name> - [ Create and switch to a new branch ]
+•  git diff <branch-name> - [ To see different b/w both branches ] 
+•  git branch -vv - [ Show branches and their upstream branches ]
+•  git branch --merged - [ Show merged branches ]
+•  Show unmerged branches - [ Show unmerged branches ]
+•  git branch -r - [ List remote branches ]
+•  git branch -a - [ List all branches (local and remote) ]
 
 
 
@@ -41,6 +60,12 @@ Q. Basics command -
 •  ls - Listing - [ To see all folders & files ].
 •  ls -a - [ To see all hidden files and folders ].
 •  mkdir - Make directory - [ To create folder ].
+•  git init - [ This command is used to create a new, empty Git repository. ]
+•  git remote add origin https://github.com/aman-shown7008/locol-repo.git - [ This command is used to add a remote repository to your local Git repository. ]
+•  git remote -v  - [ This command is used to display the current remotes associated with your local Git repository. ]
+•  git branch - [ To check the current branch ]
+•  git push -u origin main - [ This indicates that if we are pushing same pushing for same proj again & again. Then we didn't have to right origin main again ].
+
 
 
 VS Code Shortcuts-
