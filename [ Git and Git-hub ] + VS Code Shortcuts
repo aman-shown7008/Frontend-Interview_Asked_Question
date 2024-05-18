@@ -1,4 +1,9 @@
-Q. If you want to take Update in Project?
+Q. If we want to register in Git?
+A. git config --global user.name "Aman mishra" - [ Your Name ]
+   git config --global user.email amanmishra80045@gmail.com - [ Register email ]
+   git config --list - [ To see all details ] 
+
+Q. If you want to take Update/Pull in Project?
 A. Give command - Check - git status/git flow init/git pull
 
 
