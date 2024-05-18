@@ -1,13 +1,33 @@
-Q. If we want to register in Git?
+Q. If we want to Log-in in Git?
 A. git config --global user.name "Aman mishra" - [ Your Name ]
    git config --global user.email amanmishra80045@gmail.com - [ Register email ]
    git config --list - [ To see all details ] 
 
 
 
-
 Q. If you want to take Update/Pull in Project?
 A. Give command - Check - git status/git flow init/git pull.
+
+
+
+Q. If we want to Push a Project?
+A. git add file_name - [ It prepares your changes to be committed by moving them to the staging area ].
+   git add . - [ This command includes all files to be saved ].
+
+•  git commit -m "m stand for some message" - [ Saves changes locally[Laptop] and creates a new commit ].
+
+•  git push origin main - [ Synchronizes the local commits with the remote[ Git-hub] repository.
+   origin is source i.e git-hub,
+   main is branch name where we want to push.
+
+
+
+Q. Use of [ git status ] command.
+A. By this we can see our files OR folders in which we are working is up to date from where that code is placed/hosted.
+•  Untracked - When we have added some file in our code but not hosted on github.
+•  Modified - When we have some changes in our files.
+•  Staged - File/Folder ready to be commit.
+•  Unmodified - When there is no changes in our code i.e its exactly same what we download.
 
 
 
