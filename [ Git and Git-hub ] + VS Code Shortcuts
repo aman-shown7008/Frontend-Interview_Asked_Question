@@ -35,6 +35,7 @@ A. By this we can see our files OR folders in which we are working is up to date
 •  Unmodified - When there is no changes in our code i.e its exactly same what we download.
 
 
+
 Q. What is branch? Its command.
 A. It allows you to work on different features or fixes independently from the main codebase.
 •  git branch - [ List all branches ]
@@ -69,5 +70,29 @@ Q. Basics command -
 
 
 VS Code Shortcuts-
-•  Beautify Code - Shift + Alt + F
-•  Commend Code - ctrl +  slash (/)
+•  Shift + Alt + F - [ Beautify Code ]
+•  ctrl +  slash (/) - [ Comment Code ]
+•  Ctrl + Shift + P - [ Open Command Palette (very handy for accessing all commands). ]
+•  Ctrl + B - [ Toggle Sidebar visibility. ]
+•  Ctrl + ` - [ Toggle Terminal. ]
+•  Ctrl + Shift + E - [ Focus on Explorer. ]
+•  Ctrl + Shift + F - [ Search in Files. ]
+•  Ctrl + Shift + G - [ Open Source Control. ]
+•  Ctrl + Shift + D - [ Open Debug. ]
+•  Ctrl + K Ctrl + S - [ Keyboard Shortcuts. ]
+•  Alt + Arrow Up/Down - [ Move line(s) up/down. ]
+•  Ctrl + D - [ Add Selection to Next Find Match. ]
+•  Ctrl + Shift + K - [ Delete Line. ]
+•  Ctrl + Enter - [ Insert Line Below. ]
+•  Ctrl + Shift + Enter - [ Insert Line Above. ]
+•  Ctrl + F - [ Find. ]
+•  Ctrl + H - [ Replace. ]
+•  Ctrl + Shift + L - [ Select all occurrences of current selection. ]
+•  Ctrl + G - [ Go to Line. ]
+•  Ctrl + P - [ Quick Open (navigate to files). ]
+•  Ctrl + Shift + M - [ Toggle Problems (show errors/warnings). ]
+•  Ctrl + Shift + O - [ Go to Symbol (navigate within file by symbols). ]
+•  Ctrl + Shift + T - [ Reopen Closed Editor. ]
+•  Ctrl + W - [ Close Editor. ]
+•  Ctrl + K Ctrl + C - [ Add Line Comment. ]
+•  Ctrl + K Ctrl + U - [ Remove Line Comment. ]
