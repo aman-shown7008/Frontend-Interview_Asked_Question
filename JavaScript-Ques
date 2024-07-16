@@ -134,6 +134,11 @@ A. Var -
 9. Whenever we declare any variable inside function so that variable is stored in local memory space.
 
 
+Q. What is Closures?
+A. Function bundled with its lexical environment is known as a closure. Whenever function is returned, even if its vanished in execution context but still it remembers the reference it was pointing to.
+   Its not just that function alone it returns but the entire closure and that's where it becomes interesting.
+
+
 
 Q What is Callback Function?
 A 
