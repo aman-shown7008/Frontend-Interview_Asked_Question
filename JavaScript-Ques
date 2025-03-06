@@ -48,7 +48,7 @@ A. 1. We learnt how functions work in JS.
 
 
 
-Q. What is difference between undefined and not defined in JS?
+Q. What is difference between undefined, not defined & null in JS?
 A. Undefined - is a Special Placeholder which is used to reserve memory for the variables in the memory creation phase. Even before a single line of code is executed JS engine assigns undefined to the variables.
    Ex - var x;
         console.log(x); // Output: undefined
@@ -56,6 +56,10 @@ A. Undefined - is a Special Placeholder which is used to reserve memory for the 
    Not Defined means - If we try to console or access any variable which is not declared in the code then we get Not Defined error.
    Ex - // Not defined variable
         console.log(y); // Output: ReferenceError: y is not defined
+
+  Null - Explicitly assigned absence of a value. A variable/object property is intentionally set to null.
+  Ex- let data = null;
+      console.log(data); // null
 
 
 
