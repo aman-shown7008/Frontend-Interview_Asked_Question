@@ -1,6 +1,7 @@
 1. What is ReactJS?
-A. ReactJS is a JavaScript library for building user interfaces and allows developers to the creation of simple, fast, and scalable web applications.
-   ReactJS Current version - 18.2.0.
+A. ReactJS is a JavaScript library for building User Interfaces and allows developers to create simple, fast, and scalable web applications.
+   ReactJS Current version - 19.0.[ December 5, 2024 ].
+   ReactJS Previous version - 18.2.0 [ June 14, 2022 ].
    It is maintained by Facebook.
    Its First Release was 29 May 2013.
 Ex - Component-Based Architecture:
@@ -66,7 +67,7 @@ A.
 
 
 
-2. Difference betweeb DOM and Virtual DOM?
+2. Difference between DOM and Virtual DOM?
 A. React uses a virtual representation of the DOM, which allows it to efficiently update only the necessary parts of the actual DOM when data changes.
    This minimizes re-rendering, boosts performance, and results in faster updates for the user interface.
 
@@ -80,50 +81,6 @@ A. JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript a
 Ex- const element = document.createElement('h1');
     element.textContent = 'Hello, JSX!';
     document.getElementById('root').appendChild(element);
-
-
-
-----REACT-HOOKS----[ With USES ]
-1. UseState Hooks -
-A. By useState lets you add state to functional components in React, enabling them to manage and update their own data.
-   If we want to play with our UI & Want some data to get store somewhere so then we can use UseState hook.
-
-USE- It's commonly used for storing and updating data that affects the component's rendering or behavior, such as input values, toggling UI elements, or tracking user interactions.
-EX- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FuseState.jsx%3A29%2C16
-
-
-2. UseEffect Hooks -
-A. UseEffect is a built-in React hook used in functional components for handling side effects in React applications. 
-   When our component is going to be Render first time OR If there is some update in our component. Then useEffect is going to be called.
-   When we use useEffect then we are requesting react to execute function every time when our componenets render.
-   Its close replacement of a componentDidMount, componentDidUpdate and componentWillUnmount.
-
-USE - It is used for Data Fetching, DOM Manipulation, Managing Timers, Event Listeners.
-Ex- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseEffect%2FUseEffect.jsx%3A1%2C8-1%2C20
-
-
-3. UseMemo Hooks - 
-A. The useMemo hook helps to optimize performance by remembering or caching the result of a function so that it doesn't recompute the result unless the state change. This can be particularly useful when dealing with expensive calculations or complex data processing in your React components, as it helps prevent unnecessary recalculations and renders.
-
-USE - Sometimes we are changing some states of component and at the same time some unwanted function are also called & we do not want them to be run at that time we can use UseMemo. Because if that function is very and we unwanted calling him again and again so there will be performance issue OR it will take so much time to reload a component. 
-Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseMemo%2FUseMemo.jsx%3A14%2C5
-
-
-4. UseContext Hooks - 
-A. The useContext hook allows a functional component to access data from a parent component and share it with deeply nested child components without the need to pass data through each intermediate component.
-
-USE - The useContext hook in React has resolved the problem of prop drilling, which occurs when you need to pass data through multiple layers of components in order to reach a deeply nested component that requires access to that data.
-      By using useContext, you can access shared data or state directly in any component without the need to pass it down through intermediate components, thus simplifying the component hierarchy and making the codebase cleaner and more maintainable.
-
-Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseContext%2FUseContext.jsx%3A11%2C17
-
-
-5. 
-A. 
-
-USE - 
-
-Ex - 
 
 
 
@@ -175,73 +132,81 @@ A. React Router is a popular routing library for React applications that allows 
 
 
 
+Q. What is prop drilling in React?
+A. Prop Drilling happens when you pass data (props) from a parent component to a deeply nested child component, even though the intermediate components don’t need it.
 
+   Why is Prop Drilling a Problem?
+     🔹Unnecessary Passing → Components that don’t use the prop still need to pass it down.
+     🔹Hard to Maintain → If the structure changes, you have to update multiple components.
 
+   Solution for Prop Drilling
+    🔹React Context API – Allows sharing data without passing props manually.
+    🔹State Management (Redux, Zustand, Recoil) – Useful for complex applications.
 
 
 
+Q. What is Higher Order Component and Use-Case?
+A. A Higher-Order Component (HOC) is a function that takes a component as input and returns a new enhanced component.
+🔹 Think of it like a wrapper that adds extra functionality to a component without modifying its original code.
 
 
 
+Q. Explain Strict Mode in React.
+A. 
 
 
 
+Q. What is a Pure Component in React?
+A. A Pure Component in React is a component that only re-renders when its props or state change. 
+   It helps in optimizing performance by preventing unnecessary re-renders.
 
+  Use-case:
+  ✔ When components get re-rendered frequently with the same data.
+  ✔ When working with large lists or complex UI updates.
 
 
 
+Q. 
 
 
+----REACT-HOOKS----[ With USES ]
+1. UseState Hooks -
+A. By useState lets you add state to functional components in React, enabling them to manage and update their own data.
+   If we want to play with our UI & Want some data to get store somewhere so then we can use UseState hook.
 
+USE- It's commonly used for storing and updating data that affects the component's rendering or behavior, such as input values, toggling UI elements, or tracking user interactions.
+EX- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FuseState.jsx%3A29%2C16
 
 
+2. UseEffect Hooks -
+A. UseEffect is a built-in React hook used in functional components for handling side effects in React applications. 
+   When our component is going to be Render first time OR If there is some update in our component. Then useEffect is going to be called.
+   When we use useEffect then we are requesting react to execute function every time when our componenets render.
+   Its close replacement of a componentDidMount, componentDidUpdate and componentWillUnmount.
 
+USE - It is used for Data Fetching, DOM Manipulation, Managing Timers, Event Listeners.
+Ex- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseEffect%2FUseEffect.jsx%3A1%2C8-1%2C20
 
 
+3. UseMemo Hooks - 
+A. The useMemo hook helps to optimize performance by remembering or caching the result of a function so that it doesn't recompute the result unless the state change. This can be particularly useful when dealing with expensive calculations or complex data processing in your React components, as it helps prevent unnecessary recalculations and renders.
 
+USE - Sometimes we are changing some states of component and at the same time some unwanted function are also called & we do not want them to be run at that time we can use UseMemo. Because if that function is very and we unwanted calling him again and again so there will be performance issue OR it will take so much time to reload a component. 
+Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseMemo%2FUseMemo.jsx%3A14%2C5
 
 
+4. UseContext Hooks - 
+A. The useContext hook allows a functional component to access data from a parent component and share it with deeply nested child components without the need to pass data through each intermediate component.
 
+USE - The useContext hook in React has resolved the problem of prop drilling, which occurs when you need to pass data through multiple layers of components in order to reach a deeply nested component that requires access to that data.
+      By using useContext, you can access shared data or state directly in any component without the need to pass it down through intermediate components, thus simplifying the component hierarchy and making the codebase cleaner and more maintainable.
 
+Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseContext%2FUseContext.jsx%3A11%2C17
 
 
+5. 
+A. 
 
+USE - 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Ex - 
