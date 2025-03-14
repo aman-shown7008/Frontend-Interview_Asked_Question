@@ -1,0 +1,31 @@
+Basics-
+🔹 To Install - npm install -g typescript
+🔹 Check Version - tsc -v
+
+
+
+1.  What is TypeScript & Use-case?
+A.  TypeScript adds extra rules to JavaScript that help your code work better with your code editor. It helps find mistakes before you even run the code.
+    TypeScript code converts to JavaScript, which runs anywhere JavaScript runs: In a browser, on Node.js, Deno, Bun and in your apps.
+
+    Use-Case:
+🔹 Type Safety – Prevents bugs by enforcing types.
+🔹 Better Code Suggestions (Autocompletion) – Helps with better IntelliSense in VS Code.
+🔹 Improved Readability & Maintainability – Code is easier to understand in teams.
+🔹 Works with React, Node.js, and other JS frameworks – No extra effort needed.
+   
+
+
+
+2.  Difference between JavaScript and TypeScript?
+A.  Feature	                                       JavaScript (JS)                                                                            	  TypeScript (TS)
+    Definition-	                 A dynamic, loosely-typed scripting language used for web development.	                     A superset of JavaScript that adds static typing for better code quality.
+    Typing-                      Dynamically typed (no type checking).	                                                     Statically typed (checks types at compile time).
+    Compilation-         	       No compilation needed, directly runs in browsers.	                                         Needs to be compiled (tsc converts .ts to .js).
+    Error Detection-	           Errors are found at runtime.	                                                               Errors are found at compile time, preventing bugs early.
+    OOP Support-	               Supports OOP but lacks built-in interfaces and strong typing.	                             Supports interfaces, generics, and advanced OOP concepts.
+    Browser Support-	           Directly supported by browsers.	                                                           Needs to be transpiled to JavaScript before running in browsers.
+    Code Readability-	           Less structured due to lack of types.	                                                     More structured with types, making large projects easier to manage.
+    Community Support-	         Huge community, widely used.	                                                               Growing fast, preferred in large projects.
+
+
