@@ -30,7 +30,7 @@ A.  Feature	                                       JavaScript (JS)              
 
 
 
-Q.  What are the Core Data types in TS? With Use-Case.
+3.  What are the Core Data types in TS? With Use-Case.
 A.  1️⃣Number - Represents all numeric values, including integers and floating-point numbers.
     Ex - let age: number = 10;
          let binary: number = 0b1010;
@@ -94,6 +94,12 @@ A.  1️⃣Number - Represents all numeric values, including integers and floati
 
    
 
+4.  What is Type Inference in TS? Use-cases.
+A.  TypeScript automatically infers (determines) the type of a variable based on its value, without explicitly specifying the type.
+    Ex- let age = 25;  // TypeScript infers `age` as `number`
+        let name = "Alice";  // TypeScript infers `string`
+        let isActive = true;  // TypeScript infers `boolean`
+    Use-case: Automatically assigns types to object properties.
 
 
 
