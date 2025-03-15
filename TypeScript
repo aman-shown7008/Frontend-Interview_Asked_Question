@@ -19,13 +19,96 @@ A.  TypeScript adds extra rules to JavaScript that help your code work better wi
 
 2.  Difference between JavaScript and TypeScript?
 A.  Feature	                                       JavaScript (JS)                                                                            	  TypeScript (TS)
-    Definition-	                 A dynamic, loosely-typed scripting language used for web development.	                     A superset of JavaScript that adds static typing for better code quality.
-    Typing-                      Dynamically typed (no type checking).	                                                     Statically typed (checks types at compile time).
+    Definition-	                   A dynamic, loosely-typed scripting language used for web development.	                     A superset of JavaScript that adds static typing for better code quality.
+    Typing-                        Dynamically typed (no type checking).	                                                     Statically typed (checks types at compile time).
     Compilation-         	       No compilation needed, directly runs in browsers.	                                         Needs to be compiled (tsc converts .ts to .js).
-    Error Detection-	           Errors are found at runtime.	                                                               Errors are found at compile time, preventing bugs early.
+    Error Detection-	           Errors are found at runtime.	                                                                 Errors are found at compile time, preventing bugs early.
     OOP Support-	               Supports OOP but lacks built-in interfaces and strong typing.	                             Supports interfaces, generics, and advanced OOP concepts.
-    Browser Support-	           Directly supported by browsers.	                                                           Needs to be transpiled to JavaScript before running in browsers.
+    Browser Support-	           Directly supported by browsers.	                                                             Needs to be transpiled to JavaScript before running in browsers.
     Code Readability-	           Less structured due to lack of types.	                                                     More structured with types, making large projects easier to manage.
-    Community Support-	         Huge community, widely used.	                                                               Growing fast, preferred in large projects.
+    Community Support-	           Huge community, widely used.	                                                                 Growing fast, preferred in large projects.
+
+
+
+Q.  What are the Core Data types in TS? With Use-Case.
+A.  1️⃣Number - Represents all numeric values, including integers and floating-point numbers.
+    Ex - let age: number = 10;
+         let binary: number = 0b1010;
+    🔹Use Case: Used for calculations, counters, prices, etc.
+
+    2️⃣String - Represents text values.
+    Ex - let fName: string = "Aman";
+         let greeting: string = `Hello {fName}!`;
+    🔹Use Case: Used for storing and manipulating text.
+
+    3️⃣Boolean - Represents true or false values.
+    Ex - let isLogged: boolean = true;
+         let hasPermision: boolean = false;
+    🔹Use Case: Used for conditions, toggles, and authentication logic.
+
+    4️⃣Array - Represents a collection of elements of a specific type.
+    Ex - let numbers: number[] = [1, 2, 3, 4, 5];
+        let names: Array<string> = ["Alice", "Bob", "Charlie"];
+   🔹Use Case: Used for storing lists, collections, and iterations.
+
+    5️⃣Tuple - Represents a fixed-length array with different types.
+    Ex - let person: [string, number] = ["Alice", 30];
+    🔹Use Case: Used for structured data like database records.
+
+    6️⃣Enum - Represents a set of named constants.
+    Ex - enum Color { Red, Green, Blue } 
+         let myColor: Color = Color.Green;
+   🔹Use Case: Used for defining a set of related constants like status codes or modes.
+
+    7️⃣Any - Allows any type of value, disabling type checking.
+    Ex - let data : any = "Hello";
+         data = 42;
+    🔹Use Case: Used when migrating JavaScript code or handling dynamic values.
+
+    8️⃣Unknown - Similar to any, but type checking is enforced before usage.
+    Ex - let userInput: unknown;
+         userInput = "Hello";
+         userInput = 42;
+
+         if(typeof userInput === "String"){
+            console.log(userInput.toUpperCase());
+         }
+    🔹Use Case: Used for safe dynamic values where the type is initially unknown.
+
+    9️⃣Void - Used for functions that do not return a value.
+    Ex - function logMess(): void{
+           console.log("Logging...");
+         }
+    🔹Use Case: Used for functions that perform side effects like logging.
+
+    🔟Null & Undefined - Represents absence of value.
+    Ex - let nothing: null = null;
+         let notAssigned: undefined = undefined;
+    🔹Use Case: Used when a value is explicitly missing.
+
+    1️⃣1️⃣Never - Represents functions that never return or always throw an error.
+    Ex - function throwError(message: string): never {
+            throw new Error(message);
+         }
+    🔹Use Case: Used for error handling and infinite loops.
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
