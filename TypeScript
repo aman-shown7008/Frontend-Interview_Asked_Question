@@ -103,7 +103,36 @@ A.  TypeScript automatically infers (determines) the type of a variable based on
 
 
 
+Q.  How to declare Object, Array, Tuple in TS?
+A.  Objects - In TypeScript, an object type defines the structure of an object, specifying the properties and their key types.
+    Ex - type objType={name: string, age: number, location: string};
+         const user1:objType = {
+           name: "Aman Mishra",
+           age: 22, 
+           location: "lucknow"
+         }
 
+         const user2:objType = {
+           name: "Ankit bhaiya",
+           age: 24, 
+           location: "MP"
+         }
+         console.warn(user1.name+" "+user1.age);
+         console.warn(user2.name+" "+user2.age);
+    Use-case: Objects are useful when handling structured data with multiple properties.
+
+    Arrays - In TypeScript, arrays can store multiple values of a specific type.
+    Ex - let arr:string[] = ["Aman", "Hello", "Boy"];
+         let arr1: any[] = ["Aman", 12, true];
+         let arr2: [number, string] = [23, "Aman"];
+         console.log(arr);
+         console.log(arr1);
+    Use-case - Arrays are useful when storing multiple values of the same type.
+
+    Tuple - A Tuple in TypeScript is a fixed-length array where each element has a specific type. It allows storing multiple values of different types in a single variable.
+    Ex - let tuple:[string, boolean, number?] = ["Hello", true];
+         console.log(tuple);
+    Use-case -  Helps return multiple values with strict type safety.
 
 
 
