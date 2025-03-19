@@ -48,17 +48,17 @@ A.  1️⃣Number - Represents all numeric values, including integers and floati
 
     4️⃣Array - Represents a collection of elements of a specific type.
     Ex - let numbers: number[] = [1, 2, 3, 4, 5];
-        let names: Array<string> = ["Alice", "Bob", "Charlie"];
+         let names: Array<string> = ["Alice", "Bob", "Charlie"];
    🔹Use Case: Used for storing lists, collections, and iterations.
 
     5️⃣Tuple - Represents a fixed-length array with different types.
     Ex - let person: [string, number] = ["Alice", 30];
     🔹Use Case: Used for structured data like database records.
 
-    6️⃣Enum - Represents a set of named constants.
-    Ex - enum Color { Red, Green, Blue } 
-         let myColor: Color = Color.Green;
-   🔹Use Case: Used for defining a set of related constants like status codes or modes.
+    6️⃣Enum - It basically assign no to your string & make comparison easy.
+    Ex - enum Role{ ADMIN, USER, DEALER, BOT }
+         console.warn(Role);
+   🔹Use Case: Used for defining a set of related constants[no] attached with string like status codes or modes.
 
     7️⃣Any - Allows any type of value, disabling type checking.
     Ex - let data : any = "Hello";
