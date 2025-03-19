@@ -63,7 +63,7 @@ A.  1️⃣Number - Represents all numeric values, including integers and floati
     7️⃣Any - Allows any type of value, disabling type checking.
     Ex - let data : any = "Hello";
          data = 42;
-    🔹Use Case: Used when migrating JavaScript code or handling dynamic values.
+    🔹Use Case: Used when we did not know what type of data is going to be stored in this.
 
     8️⃣Unknown - Similar to any, but type checking is enforced before usage.
     Ex - let userInput: unknown;
