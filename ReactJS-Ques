@@ -166,7 +166,12 @@ A. A Pure Component in React is a component that only re-renders when its props 
 
 
 
-Q. 
+Q. Why we use UseState if we can use Variable declaration?
+A. React does not track normal variables.
+   State ensures the UI updates automatically.
+   State persists between renders, unlike normal variables.
+   Using useState tells React to re-render the component when the value changes.
+
 
 
 ----REACT-HOOKS----[ With USES ]
