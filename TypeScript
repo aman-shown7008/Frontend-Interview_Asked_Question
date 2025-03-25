@@ -103,7 +103,7 @@ A.  TypeScript automatically infers (determines) the type of a variable based on
 
 
 
-5.  How to declare Object, Array, Tuple, Union, Literals in TS?
+5.  How to declare Object, Array, Tuple, Union, Literals, Type_alias, Function_type in TS?
 A.  Objects - In TypeScript, an object type defines the structure of an object, specifying the properties and their key types.
     Ex - type objType={name: string, age: number, location: string};
          const user1:objType = {
@@ -155,6 +155,24 @@ A.  Objects - In TypeScript, an object type defines the structure of an object, 
     "Success" → Data fetched successfully.
     "Error" → Something went wrong.
     Using literal types, we can ensure the function only accepts valid statuses.
+
+    Type_alias - With Type Alias, you define a type once and reuse it for multiple variables. This avoids repetitive type declarations and makes code more readable and maintainable.
+    Ex - type varType = string | number | null;
+         function alias(num1 : varType, num2 : varType, num3 : varType){
+           console.log(num1+" "+num2+" "+num3);
+         }
+         console.log(alias("Hi Boy!", 97, null));
+    🔹Use-Case - Instead of writing the same type multiple times, we define it once and reuse it.
+
+    Function_type - A Function Type in TypeScript defines the structure (parameters & return type) of a function. It ensures type safety and consistency.
+    Ex - type MathOpertion = (a: number | undefined, b: number | undefined) => number | undefined;
+         const add: MathOpertion = (a, b) => (a != undefined && b != undefined ? a + b : undefined);
+         function sub(a: number, b : number):number{
+           return b - a;
+         }
+         console.log(add(5, 6));
+         console.log(sub(2, 6));
+    🔹Use-Case - Function types are useful in many scenarios where we need consistent, reusable, and type-safe functions.
 
 
 
