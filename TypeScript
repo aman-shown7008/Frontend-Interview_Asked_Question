@@ -103,7 +103,7 @@ A.  TypeScript automatically infers (determines) the type of a variable based on
 
 
 
-5.  How to declare Object, Array, Tuple, Union, Literals, Type_alias, Function_type, unknown_type in TS?
+5.  How to declare Object, Array, Tuple, Union, Literals, Type_alias, Function_type, unknown_type, never_type in TS?
 A.  Objects - In TypeScript, an object type defines the structure of an object, specifying the properties and their key types.
     Ex - type objType={name: string, age: number, location: string};
          const user1:objType = {
@@ -186,6 +186,20 @@ A.  Objects - In TypeScript, an object type defines the structure of an object, 
          console.log(data);
     🔹Use-Case - When handling user inputs or API responses where the type is not predetermined.
 
+    Never_type - Never is a TypeScript type that represents values that never occur. It is used for functions that never return (like those that always throw an error or run indefinitely) and for unreachable code."
+    Ex - function apiError(msg, sCode){
+           throw {Message: msg, Status_Code: sCode}
+         }
+         console.log(apiError("Serve Side Error", 500));
+    🔹Use-Case - Use never when a function never completes execution (throws an error or runs forever).
+
+
+
+6.  Difference b/w Never & Void? 
+A.  Feature	                               never	                                                              void
+    Meaning-	          Represents a function that never returns.	                          Represents a function that returns but has no value.
+    Use Case-	          Used for functions that throw an error or run forever.	          Used for functions that return undefined or don't return anything.
+    Example-              A function that always throws an error or an infinite loop.	      A function that executes a task but doesn't return a value.
 
 
 
