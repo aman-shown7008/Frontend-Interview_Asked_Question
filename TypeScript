@@ -1,9 +1,11 @@
 Basics-
 🔹 To Install - npm install -g typescript
 🔹 Check Version - tsc -v
+🔹 Compile Multiple file into JS - tsc -watch
+🔹 Generate TS config file - tsc -init
 
 
-
+    
 1.  What is TypeScript & Use-case?
 A.  TypeScript adds extra rules to JavaScript that help your code work better with your code editor. It helps find mistakes before you even run the code.
     TypeScript code converts to JavaScript, which runs anywhere JavaScript runs: In a browser, on Node.js, Deno, Bun and in your apps.
