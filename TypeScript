@@ -205,6 +205,22 @@ A.  Feature	                               never	                               
 
 
 
+Q.  What is target Configuration in TS?
+A.  In TypeScript, the target configuration option in tsconfig.json determines the ECMAScript version that TypeScript will compile the code down to.
+    🔹TypeScript itself is a superset of JavaScript, and modern JavaScript has many versions (ES5, ES6/ES2015, ESNext, etc.).
+    🔹The target option specifies the JavaScript version that TypeScript should output.
+    🔹Changing the target affects syntax features, transpilation behavior, and compatibility with older environments.
+    {
+      "compilerOptions": {
+       "target": "ES6"
+      }
+    }
+
+
+
+
+
+
 
 
 
