@@ -205,7 +205,7 @@ A.  Feature	                               never	                               
 
 
 
-Q.  What is target Configuration in TS?
+7.  What is target Configuration in TS?
 A.  In TypeScript, the target configuration option in tsconfig.json determines the ECMAScript version that TypeScript will compile the code down to.
     🔹TypeScript itself is a superset of JavaScript, and modern JavaScript has many versions (ES5, ES6/ES2015, ESNext, etc.).
     🔹The target option specifies the JavaScript version that TypeScript should output.
@@ -215,6 +215,22 @@ A.  In TypeScript, the target configuration option in tsconfig.json determines t
        "target": "ES6"
       }
     }
+
+
+
+8.  What is outDir and rootDir in tsconfig.json? Use-case.
+A.  outDir-
+    🔹It specifies the output folder where compiled JavaScript files will be placed.
+    🔹TypeScript will place all compiled .js files (and other output like .d.ts files) inside outDir.
+    Ex - "outDir": "./jsBuild",   
+    👉 Use-case: If you want all compiled JavaScript files to be stored in a dist folder, you can set:
+
+    rootDir-
+    🔹It specifies the root folder that contains your TypeScript source files.
+    🔹TypeScript uses rootDir to determine which files should be considered as part of the project.
+    🔹It does not move or copy any files; it just helps TypeScript understand the project structure.
+    Ex - "rootDir": "./src", 
+    👉 Use-case: If you have multiple folders but only want TypeScript to compile files from a specific folder (src), you can set:
 
 
 
