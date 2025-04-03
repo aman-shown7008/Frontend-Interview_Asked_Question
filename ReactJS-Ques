@@ -175,9 +175,19 @@ A. React does not track normal variables.
 
 
 ----REACT-HOOKS----[ With USES ]
+Q. What is Hooks? Use-Case.
+A. Hooks are special functions introduced in React 16.8 that allow you to use features or functionalities provided by React in functional components.
+   Ex - Imagine there is a locked door, and you need a key to open it. The key provides access to the door’s functionality (opening and closing). Similarly, Hooks act as keys that unlock React features like state management, side effects, and context inside functional components.
+
+
 1. UseState Hooks -
-A. By useState lets you add state to functional components in React, enabling them to manage and update their own data.
-   If we want to play with our UI & Want some data to get store somewhere so then we can use UseState hook.
+A. State is any data that can change dynamically in the UI. If a value updates and the UI reflects that change, it is considered state.
+   UseState Hook in React provides two things:
+   A variable → Stores the current state value.
+   A function → Updates the stored state dynamically.
+   Real-Life Example - Imagine a person wearing a red t-shirt. If they decide to change into a blue t-shirt, their clothing changes dynamically.
+                       The t-shirt represents the state (data stored in useState).
+                       The action of changing the t-shirt represents the function that updates the state.
 
 USE- It's commonly used for storing and updating data that affects the component's rendering or behavior, such as input values, toggling UI elements, or tracking user interactions.
 EX- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FuseState.jsx%3A29%2C16
