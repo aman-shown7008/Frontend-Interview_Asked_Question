@@ -1,7 +1,43 @@
+Important & Basics Steps of Redux-
+Redux is a state management library used to avoid prop drilling (passing props through multiple levels). It helps you manage global state in one centralized place — the store.
+🔄 Redux Flow (How it works):
+UI Interaction 
+   ↓
+Dispatch Action 
+   ↓
+Reducer handles it 
+   ↓
+State in Store is Updated 
+   ↓
+UI Re-renders with New State
+Ex - Button Click → dispatch(increment()) → Reducer: count + 1 → New count in store → UI updates with new count
+
+🧱 Redux Setup Steps (Step-by-step):
+1️⃣ Create a Redux Store - 
+🔹 In a redux/ folder, create store.ts or store.js
+
+2️⃣ Wrap your App with <Provider> -
+🔹 Done in main.jsx or index.tsx
+🔹 <Provider store={store}> <App /> </Provider>
+
+3️⃣ Create a Slice -
+🔹 In features/featureName/, create a slice file (e.g., counterSlice.ts)
+🔹 It includes: initialState, reducers, and actions
+
+4️⃣ Register the Slice in the Store -
+🔹 Add your slice's reducer to the store’s reducers field
+
+5️⃣ Use Redux in your Components -
+🔹 Use useSelector() to get state
+🔹 Use useDispatch() to trigger actions
+
+
+
 1.  What is Redux Toolkit? Use-Case.
 A.  Redux is a state management library for JavaScript applications. It helps manage and share data (state) across different parts of an app in a predictable way.
     Think of it as a global storage system where all components can access and update data efficiently.
     Redux helps manage global state in a structured way, making complex apps more predictable, maintainable, and scalable. 
+    Redux is a state management library used to avoid prop drilling (passing props through multiple levels). It helps you manage global state in one centralized place — the store.
 
     Why Do We Need Redux?
     Imagine you're building a shopping app:
