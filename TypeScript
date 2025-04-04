@@ -234,6 +234,31 @@ A.  outDir-
 
 
 
+9.  How can we do Code Quality improvement by TypeScript?
+A.  1️⃣noUnusedLocals: true – This option issues a warning if a variable is declared but never used in the code.
+    Ex - let a = 10; // Error: 'a' is declared but its value is never read.
+    2️⃣noUnusedParameters: true – This option warns when a function parameter is declared but not used within the function body.
+    Ex - function greet(name: string) { 
+           console.log("Hello!");
+         } // Warning: 'name' is declared but never used.
+    3️⃣noImplicitReturns: true – Ensures that functions return a value consistently in all code paths. If a function returns a value in one path but not in others, TypeScript raises an warning.
+    Ex - function checkValue(flag: boolean): string {
+           if (flag) {
+             return "Valid"; 
+           }else{
+             console.log("Hello");
+           }// Error: Not all code paths return a value.
+         }
+    4️⃣noFallthroughCasesInSwitch: true – Prevents unintentional fallthrough in switch statements if a break or return is missing in a case.
+    Ex - switch (value) {
+           case 1:
+             console.log("One");
+           case 2:
+             console.log("Two"); // Error: Fallthrough case in switch statement.
+         }
+
+
+
 
 
 
