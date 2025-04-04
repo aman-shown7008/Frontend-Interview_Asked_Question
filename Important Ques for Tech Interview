@@ -28,6 +28,32 @@ A.  Axios → A third-party library to make HTTP requests easily. It has built-i
 
 
 
+3.  What state management solutions do you follow? And what is the need of it.
+A.  I usually use Redux for complex applications where multiple components need access to shared state. For smaller or less complex applications, I sometimes use Context API for lightweight state sharing.
+    The main reason we use state management solutions is to handle global state—data that needs to be accessed and updated across multiple parts of the app. Without proper state management, it becomes difficult to maintain consistency, especially when components are deeply nested or when data flow gets too complex.
+    These tools help improve scalability, maintainability, and debugging in large applications.
+
+    Uses of ContextAPI - 
+    🔸 Use Case: You want to allow the user to switch between light and dark themes, and this theme should be available across the entire app — in header, footer, dashboard, etc.
+    🔸 Why Context API?
+        It’s a global value needed across many components.
+        Doesn’t change frequently.
+        Doesn’t require complex logic.
+        No async or API calls involved.
+
+    Use of Redux-Toolkit- 
+    🔸 Use Case: An online store where:
+                 User adds/removes items to/from cart
+                 Cart total is calculated
+                 Cart is used in multiple places: Product page, Cart page, Header, Checkout
+                 You may even sync cart with backend (async)
+
+    🔸 Why Redux?
+       The state is shared across many components.
+       It’s dynamic — user actions change the state often.
+       Requires asynchronous logic (e.g., fetch product info, sync cart with backend).
+       Needs central control for better tracking and testing.
+
 
 
 
