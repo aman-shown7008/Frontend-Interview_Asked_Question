@@ -56,8 +56,36 @@ A.  I usually use Redux for complex applications where multiple components need 
 
 
 
-
-
+4.  What is Exception handling? And how can we handle it.
+A.  Exception Handling is a way to manage errors (also known as exceptions) that occur while a program is running, without crashing the entire application.
+    In frontend development, these errors can come from:
+    🔸API calls failing.
+    🔸JSON parsing issues.
+    🔸Incorrect user input.
+    🔸DOM manipulation errors.
+    🔸Network issues.
+    🔸Unexpected data from server.
+    Instead of letting the app crash, exception handling allows you to gracefully catch and respond to those problems — like showing an error message, retrying, or giving fallback UI.
+    Scenario:
+    🔁You’re building a weather app. It fetches current temperature from an API when the user clicks "Get Weather". But let’s say the user loses internet connection or the server is down. The fetch call will fail — if not handled, the app might crash or freeze.
+    🛒You're building an e-commerce website.
+    🔸User clicks on a product.
+    🔸You send a request to the API to get product details.
+    🔸But — description is missing, or the API fails.
+    🔸Instead of crashing or showing empty space, you use a catch block (or condition) to show:
+    🔸A default image
+    🔸A "Description not available" message
+    So we handle this with a try...catch block.
+    Ex - import axios from "axios";
+         async function fetchProductDetails(productId) {
+           try {
+             const res = await axios.get(`/api/products/${productId}`);
+             setProduct(res.data);
+           } catch (error) {
+             console.error("Error fetching product:", error.message);
+             setProduct({ description: "Description not available", image: "/fallback.png" });
+           }
+         }
 
 
 
