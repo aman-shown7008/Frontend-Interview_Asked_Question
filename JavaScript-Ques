@@ -43,10 +43,10 @@ A. JavaScript is a Synchronous single-threaded language everything in JavaScript
    ✅Call Stack is now empty
    Call Stack:
    [ empty ]
-   The Global Execution Context is created first, and it always stays at the bottom of the Call Stack.
-   Every function call creates a new Execution Context, which gets pushed onto the stack.
-   Once a function finishes, its context is popped off.
-   Only one context runs at a time — the one at the top of the stack.
+   🔹The Global Execution Context is created first, and it always stays at the bottom of the Call Stack.
+   🔹Every function call creates a new Execution Context, which gets pushed onto the stack.
+   🔹Once a function finishes, its context is popped off.
+   🔹Only one context runs at a time — the one at the top of the stack.
 
 
 
