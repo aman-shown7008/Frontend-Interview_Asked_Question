@@ -47,6 +47,13 @@ A. JavaScript is a Synchronous single-threaded language everything in JavaScript
    🔹Every function call creates a new Execution Context, which gets pushed onto the stack.
    🔹Once a function finishes, its context is popped off.
    🔹Only one context runs at a time — the one at the top of the stack.
+   🔹Excution Context contains two things- Memory || Variable Enviroment, Code Enviroment, Thread of Excution. 
+      1️⃣Memory / Variable Environment - Stores: Variables, Function declarations, Arguments.
+                                        Created during the Creation Phase.
+                                        Handles hoisting.
+      2️⃣Code Environment / Thread of Execution - Executes code line by line.
+                                                  Happens in the Execution Phase.
+                                                  Uses values from memory to run logic.
 
 
 
