@@ -12,6 +12,7 @@ Ex - Component-Based Architecture:
 •  Sidebar Component: Displays relevant shortcuts or additional navigation.
 •  Main Content Component: Shows the main content of the page.
 •  Footer Component: Includes copyright info, links, etc.
+   Its creates Single Page Application (SPA). Becz when we open any website i.e created by ReactJS. So it download all resource, page at one time.
 
 
 
