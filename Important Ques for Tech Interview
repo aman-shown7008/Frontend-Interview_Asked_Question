@@ -89,6 +89,28 @@ A.  Exception Handling is a way to manage errors (also known as exceptions) that
 
 
 
+5.  What is difference b/w Framework & Library?
+A.  Library -
+    🔸A library is a collection of pre-written code that provides specific functionality.
+    🔸It gives full control to the developer over the application’s structure and flow.
+    🔸Perfect for adding functionality into an existing app without refactoring.
+    Ex - Bootstrap sets the styling conventions (like .btn, .btn-primary).
+         You follow the class structure Bootstrap expects.
+         You can’t easily customize without overriding the default styles.
+         Bootstrap provides the full structure & style.
+         Developer uses predefined classes like card, btn, card-title.
+
+    Framework - 
+    🔸A framework provides a structured foundation for building applications.
+    🔸Built-in features like routing, state management, and templating save time.
+    🔸Everyone follows the same conventions, making code more maintainable and readable.
+    Ex - Material UI provides component-level utilities.
+         You are in full control — you just use the parts you need.
+         Easy to customize using props or override styles via sx or theme.
+         Material UI provides components as building blocks.
+         You customize with props and design freely.
+
+
 
 
 
