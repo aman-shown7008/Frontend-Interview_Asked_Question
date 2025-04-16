@@ -83,6 +83,22 @@ A.  Bootstrap: Component-first
 
 
 
+5.  Give me in uses of Tailwind[ Utility-first ] approach over inline CSS?
+A.  🔹Cleaner and more readable code.
+    Ex - <div class="bg-red-500 text-white p-4 rounded">
+           Alert Message
+         </div>
+    🔹Responsive design made easy.
+    Ex - <p class="text-sm md:text-lg lg:text-xl">Hello</p>
+    🔹Easy to create reusable component styles.
+    🔹Highly customizable via tailwind.config.js.
+    🔹Cleaner code without bloated CSS files.
+    🔹No CSS duplication across components. - Its  compiles utility classes once.
+        ✅text-red-500 gets generated once in your compiled CSS.
+        ✅No matter how many times you use it in your HTML, it won’t bloat the output.
+
+
+
 
 
 
