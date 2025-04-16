@@ -1,14 +1,14 @@
-Tell me some Formatting elements in HTML?
-<b> - Bold text
-<strong> - Important text
-<i> - Italic text
-<em> - Emphasized text
-<mark> - Marked text
-<small> - Smaller text
-<del> - Deleted text
-<ins> - Inserted text
-<sub> - Subscript text
-<sup> - Superscript text
+1.  Tell me some Formatting elements in HTML?
+A.  <b> - Bold text
+    <strong> - Important text
+    <i> - Italic text
+    <em> - Emphasized text
+    <mark> - Marked text
+    <small> - Smaller text
+    <del> - Deleted text
+    <ins> - Inserted text
+    <sub> - Subscript text
+    <sup> - Superscript text
 
 HTML Comments
 <!-- Write your comments here -->
