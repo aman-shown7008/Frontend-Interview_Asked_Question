@@ -1,10 +1,12 @@
 1. What are Pseudo elements and Pseudo classes?
 A. Pseudo-elements allows us to create items that do not normally exist in the document tree, for example ::after.
+   A pseudo-element lets you style specific parts of an element or insert content that doesn’t exist in the HTML.
   ::before
   ::after
   ::first-letter
 
   Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.
+  A pseudo-class is used to define a special state of an element.
  :link
  :visited
  :hover
