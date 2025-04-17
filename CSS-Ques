@@ -20,8 +20,23 @@ A. Here's how it affects layout:
 
 
 3. Difference between grid and flex?
-CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows. Grid layout is intended for larger-scale layouts which aren’t linear in design.
-Flexbox is largely a one-dimensional system (either in a column or a row). Flexbox layout is most appropriate to the components of an application.
+A. Use Flexbox when you're working with one row or one column — like navbars, buttons in a row, etc.
+   Flexbox is largely a one-dimensional system (either in a column or a row). Flexbox layout is most appropriate to the components of an application.
+   Ex - .toolbar {
+            display: flex;
+            justify-content:flex-end;
+         }
+         Output - [ Box 1 ] [ Box 2 ] [ Box 3 ]
+
+   Use Grid when you're building layouts or dashboards — like placing cards in a grid, or a full page layout.
+   CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows. Grid layout is intended for larger-scale layouts which aren’t linear in design.
+   Ex - .toolbar {
+            display: grid;
+            grid-template-column: 200px 1fr;
+         }
+         Output - [ Box 1 ] [ Box 2 ]
+                  [ Box 3 ] [ Box 4 ]
+
 
 
 4. What is the difference between inline, inline-block, and block?
