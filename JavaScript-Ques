@@ -200,6 +200,17 @@ A. Function bundled with its lexical environment is known as a closure. Whenever
 6. setTimeout stores the function in a different place and attached a timer to it, when the timer is finished it rejoins the call stack and executed.
 7. Without closure the var reference gives the latest value as it does not retain the original value but rather has the reference so any update in value after timeout will be shown.
 8. If we use let/const because they have block scope, every time a new copy of variable is attached, thus this can be done without closure.
+Ex- function outer(){
+     let idx = 1;
+     function inner(){
+        idx++;
+        console.log(idx);
+     }
+     return inner;
+    }
+    const count = outer();
+    count();
+    count();
 
 
 
