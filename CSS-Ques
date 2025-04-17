@@ -44,12 +44,15 @@ A. Use Flexbox when you're working with one row or one column — like navbars, 
 4. What is the difference between inline, inline-block, and block?
 A. Display Property: display: inline;
    Description: Elements are rendered on the same line as adjacent content. They only take up as much width as necessary and do not start on a new line.
+                Stays on the same line, cannot set width or height, and it only takes up as much space as its content needs.
 
    Display Property: display: inline-block;
    Description: Elements are rendered as inline, but they can have block-level properties like width and height. They sit on the same line, but you can control their dimensions.
+                Also stays on the same line, BUT you can set width and height. It will only move to the next line if there's no space left — not just because you gave it height or width.
 
    Display Property: display: block;
    Description: Elements start on a new line and take up the full width available. They stack on top of each other, creating a block-level box.
+                Always starts on a new line, takes full width by default, and lets you set height/width.
 Ex- <h2>HTML Iframes example</h2>
     <h2>Iframes example</h2>
 
