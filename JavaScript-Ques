@@ -278,3 +278,36 @@ A. 1. Function that is passed on as argument to another function is called callb
         }
         calledFunc(callback);
 
+
+
+Q.  What is Callback Hell & Inversion of control? Why it is problem.
+A.  Callback Hell - It happens when we write many nested callback functions — that is, one function is passed inside another, which is again passed into another, and so on.
+    This creates a structure that looks like a pyramid or staircase, making the code messy and hard to understand or manage.
+    Ex - const cart = ["shoes", "pants", "kurtas"];
+         api.createOrder(cart, function () {
+             api.proceedPayment(function () {
+                 api.showSummary(function () {
+                     api.updateWallet(function () {
+                         console.log("Callback Hell");
+                     });
+                 });
+             });
+         });
+    Why it’s a problem:
+    🔹Code becomes difficult to read and maintain.
+    🔹It’s hard to debug or trace errors.
+    🔹Each function depends on the previous one, so it becomes very fragile if any one of them fails.
+
+    Inversion of Control - It means giving the control of your code to someone else — like passing a callback function to an API or another function.
+    You don’t know when, how, or even if that function will be called, which can lead to unpredictable behavior.
+    Ex: Let’s say you’re building a shopping app:
+    You first Create Order
+    🔹Then do Payment
+    🔹Then show Order Summary
+    🔹Finally, Update Wallet
+    Now, if you pass the Order Summary function inside the Payment function (as a callback), you're trusting a few things:
+    That payment() will run correctly
+    That it will call the Order Summary function at the right time
+    That there are no errors from the backend or network
+    But if something goes wrong inside payment(), your Order Summary function might never get called. This means you lose control over what happens next 
+
