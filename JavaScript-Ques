@@ -259,6 +259,50 @@ A. Call Stack is present inside JS engine.
 
 
 
+Q.  What is d/f b/w Normal Named function and Immediate Invoked Function Expression (IIFE)? Uses.
+A.  1. Normal Named Function - 
+    A normal named function in JavaScript is a reusable block of code that performs a specific task. It is declared with a name and can be invoked (called) multiple times anywhere in the program.
+    Key-Points:
+    🔹Defined using the function keyword with a name
+    🔹Can be called/reused multiple times
+    🔹Can be stored globally or locally
+    🔹Helpful for modular, readable code
+    Ex - function addToCart(productId) {
+            console.log(`Product ${productId} added to cart`);
+         }
+    ✅Use Cases:
+    addToCart(productId)
+    applyCoupon(code)
+    calculateTotal(items)
+    filterProducts(category)
+    validateForm(data)
+    🗣️ Why? Because these actions are needed multiple times by user interactions — clicks, typing, etc.
+
+    2. IIFE (Immediately Invoked Function Expression) - 
+    An IIFE is a function in JavaScript that is executed immediately after it is defined. It’s typically anonymous and is used to create a private scope or execute setup code once, without polluting the global namespace.
+    Key-Points:
+   🔹Declared and executed immediately
+   🔹Cannot be reused (unless wrapped again)
+   🔹Great for data privacy and isolation
+   🔹Prevents global variable pollution
+   🔹Mostly used for initializations, modules, and one-time setup logic.
+   Ex - (function() {
+          var config = {
+            apiKey: "SECRET_KEY",
+            currency: "INR"
+          };
+          console.log("🛍️ E-commerce App Initialized");
+          // Fetch categories, setup filters, initialize cart
+        })();
+    ✅Use Cases:
+    Initialize default filter values
+    Setup and protect API keys/config
+    Encapsulate setup logic
+    Create private modules (pre-ES6)
+    Run analytics or tracking on page load
+
+    
+
 Q. What is Callback Function?
 A. 1. Function that is passed on as argument to another function is called callback function.
    2. setTimeout helps turn JS which is sinhlethreaded and synchronous into asynchronous.
