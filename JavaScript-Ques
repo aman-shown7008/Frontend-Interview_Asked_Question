@@ -304,23 +304,36 @@ A.  1. Normal Named Function -
     
 
 Q. What is Callback Function?
-A. 1. Function that is passed on as argument to another function is called callback function.
+A. 1. A callback function is a function passed as an argument to another function, which is then invoked inside the outer function to complete some kind of routine or action.
    2. setTimeout helps turn JS which is sinhlethreaded and synchronous into asynchronous.
    3. Event listeners can also invoke closures with scope.
    4. Event listeners consume a lot of memory which can potentially slow down the website therefore it is good practice to remove if it is not used.
-   Ex - function calledFunc(callback){
-          console.log('Performing Some task');
-    
-          setTimeout(function(){
-            console.log("Second");
-            callback();
-          }, 1000);
-        }
+   Uses - 
+   JavaScript is synchronous and single-threaded, which means it executes one line at a time. But for tasks like:
+   🔹Delayed execution (setTimeout, setInterval)
+   🔹API calls
+   🔹File reading
+   🔹Event handling (like onclick)
+    Ex - document.getElementById('btn').addEventListener('click', () => {
+            console.log("Button Clicked!");
+          });
+    You're saying:
+    "Hey browser, when this event (a click) happens in the future, please call this function."
+    The function doesn't run at the time of writing, but is registered in the browser’s event system.
 
-        function callback(){
-          console.log("callback Func");
+   ...you don't want to block the main thread, so callbacks help by allowing certain tasks to run asynchronously.
+   Ex - setTimeout(() => {
+          console.log("Executed after 5 seconds");
+        }, 5000);
+        function first(inner) {
+           console.log("FIRST");
+           inner(); // This is the callback execution
         }
-        calledFunc(callback);
+        function inner() {
+          console.log("INNER");
+        }
+        first(inner); 
+
 
 
 
