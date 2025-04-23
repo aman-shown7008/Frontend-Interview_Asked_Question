@@ -336,7 +336,6 @@ A. 1. A callback function is a function passed as an argument to another functio
 
 
 
-
 Q.  What is Callback Hell & Inversion of control? Why it is problem.
 A.  Callback Hell - It happens when we write many nested callback functions — that is, one function is passed inside another, which is again passed into another, and so on.
     This creates a structure that looks like a pyramid or staircase, making the code messy and hard to understand or manage.
@@ -367,4 +366,71 @@ A.  Callback Hell - It happens when we write many nested callback functions — 
     That it will call the Order Summary function at the right time
     That there are no errors from the backend or network
     But if something goes wrong inside payment(), your Order Summary function might never get called. This means you lose control over what happens next 
+
+
+
+Q.  What is Promises? Use-case.
+A.  A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+    🔄Three States of a Promise:
+    State	          |                  Description                                          |       Real-Life Example   
+    🔹Fulfilled	    |        The operation completed successfully.                          |       You got your food.
+    🔹Rejected	       |        The operation failed with an error.                            |       Delivery boy canceled.
+    🔹Pending	       |        The initial state. The result is not yet available.            |       Food is being prepared  
+    Ex - let myPromise = new Promise((resolve, reject) => {
+            // async operation
+          });
+
+    🔄Methods of a Promise to show Data.
+    Method              |                   Purpose                                            |                                     Real-Life Example   
+    🔹.then()          |        Executes when Promise is fulfilled (success).                 |      Let’s say you're building an e-commerce site. You fetch product data. - .then() is where you show the data in UI.
+    🔹.catch()         |        Executes when Promise is rejected (error).                    |      .catch() is where you show a toast or error screen if the API fails.
+    🔹.finally()       |        Executes regardless of success or failure (cleanup).          |      When you fetch something, you usually show a loading spinner. - You ALWAYS want to hide loader – that's the job of .finally().
+    Ex - fetchData(){
+           .then(showData)
+           .catch(showError)
+           .finally(() => {
+              hideLoader(); // Always runs
+           });
+         }
+
+    Promise Chaining - Promise chaining is a way to run multiple asynchronous tasks one after another, where each task waits for the previous one to finish.
+                       We do this by returning a value (or another promise) from one .then() and calling another .then() after it.
+    Example from a video processing app:
+    🔹Upload video
+    🔹Extract audio
+    🔹Get captions
+    Show on screen
+    Ex - uploadVideo(file)
+         .then(extractAudio)
+         .then(generateCaptions)
+         .then(showCaptions)
+         .catch(showError)
+         .finally(hideLoader);
+
+    Promise.all() - Used to run multiple Promises in parallel, and wait for all to finish. If any one fails, the whole Promise.all fails.
+    Example in E-commerce:
+    You want to show:
+    🔹Product Details
+    🔹Similar Products
+    🔹Reviews
+    Ex - Promise.all([
+           fetch("/api/product/123"),
+           fetch("/api/similar/123"),
+           fetch("/api/reviews/123")
+         ])
+         .then(([product, similar, reviews]) => {
+           showProduct(product);
+           showSimilar(similar);
+           showReviews(reviews);
+         })
+        .catch((err) => {
+           showError("Some data failed to load");
+        });
+
+
+
+    
+
+
+
 
