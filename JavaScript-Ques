@@ -430,8 +430,43 @@ A.  A Promise in JavaScript is an object that represents the eventual completion
 
 
 Q.  What is Async/Await? Use-Case.
-A.  
+A.  async and await are modern JavaScript keywords that make working with Promises easier and more readable. 
+    They were introduced in ES2017 (ES8) to simplify asynchronous code by writing it in a synchronous style, improving code clarity, maintainability, and debugging.
 
+    1. async Keyword - 
+    🔹The async keyword is used before a function declaration to tell JavaScript that the function will return a Promise, even if it looks like regular synchronous code.
+    🔹Any value returned from an async function is implicitly wrapped in a Promise.
+    Ex - async function fetchData() {
+            return "data"; // returns a Promise that resolves to "data"
+         }
+    2. await Keyword - 
+    🔹await can only be used inside an async function.
+    🔹It tells JavaScript to pause execution of the function until the awaited Promise resolves or rejects.
+    🔹This allows writing code that looks synchronous, but is actually asynchronous.
+    🔹await only blocks inside the async function where it's used. It does NOT block code that is outside that async function.
+
+
+    Ex - async function fetchData() {
+           const response = await fetch('https://api.example.com/data');
+           const data = await response.json();
+           console.log(data);
+         }
+
+    Why Use Async/Await Over Promises (.then/.catch)?
+    Feature                |             Promises (.then)                    |             Async/Await
+    🔹Readability         |      Can get nested and hard to follow          |      Looks like synchronous code
+    🔹Error Handling      |      Requires .catch() or nested .then          |      Use try...catch just like sync code
+    🔹Debugging           |      Stack traces can be messy                  |      Cleaner stack traces and better breakpoints
+    🔹Flow Control        |      Chained .then()                            |      Top-down execution flow
+
+    Real-World Use-Cases of Async/Await-
+    APIs / Fetching Data from Backend.
+    Authentication (Login/Register).
+    File Uploads or Cloud Services (AWS, Cloudinary).
+
+    Key-points:
+    🔹async/await: You say, "Hey, I'm going to cook 3 dishes, one after another, but I’ll write it cleanly so others can understand what I did."
+    🔹Promise.all(): You say, "Let’s cook all 3 dishes at the same time using different chefs (parallel execution)."
 
 
 
