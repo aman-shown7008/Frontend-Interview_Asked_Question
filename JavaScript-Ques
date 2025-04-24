@@ -467,6 +467,10 @@ A.  async and await are modern JavaScript keywords that make working with Promis
     Key-points:
     🔹async/await: You say, "Hey, I'm going to cook 3 dishes, one after another, but I’ll write it cleanly so others can understand what I did."
     🔹Promise.all(): You say, "Let’s cook all 3 dishes at the same time using different chefs (parallel execution)."
+    🔹Async functions run like normal functions and enter the Call Stack when called.
+    🔹When the engine hits an await, it pauses the function and removes it from the Call Stack — it doesn’t block other code.
+    🔹The rest of the function is moved to the Microtask Queue, waiting for the awaited Promise to resolve.
+    🔹Once resolved, the function is resumed from where it paused, and added back to the Call Stack to finish execution.
 
 
 
