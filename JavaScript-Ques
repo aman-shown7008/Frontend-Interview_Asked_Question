@@ -57,6 +57,69 @@ A. JavaScript is a Synchronous single-threaded language everything in JavaScript
                                                   Uses values from memory to run logic.
 
 
+Q. What is Event loop? Uses.
+A. Continuously checks whether the Call Stack is empty, and if so, pushes tasks from the Microtask Queue (Promises) and then the Callback Queue (setTimeout, fetch, etc.) into the Call Stack for execution.
+   JavaScript is synchronous and single-threaded, but the Event Loop is the mechanism that enables asynchronous behavior like:
+   🔹setTimeout, setInterval
+   🔹Promises (.then, async/await)
+   🔹Event listeners (like click, keydown)
+   🔹fetch() and other browser/web APIs
+   The Problem
+   🔹JS alone can only do one thing at a time. So how does it handle delays, async calls, UI responsiveness, etc.?
+   🔹The Solution: Event Loop + Web APIs + Callback Queue (Task Queue) + Microtask Queue.
+
+    🧠 JavaScript Runtime Environment Includes:
+    Call Stack – Where Execution Contexts are pushed/popped.
+    Web APIs (by browser) – Handles setTimeout, DOM events, AJAX, etc.
+    Callback (Task) Queue – Queues async callbacks like from setTimeout, click, etc.
+    Microtask Queue – Queues callbacks from Promises (.then, catch, finally), and MutationObserver.
+
+    Event-Loop Working-
+    The Event Loop constantly monitors:
+    If the Call Stack is empty
+    And if there’s anything in the Microtask Queue or Callback Queue
+    Execution order:
+    Run any code in the Call Stack (synchronous)
+    If the stack is empty:
+    First, process all tasks in the Microtask Queue
+    Then, take the first task from the Callback Queue and push it to the Call Stack
+    Microtask Queue Has Higher Priority than Callback Queue
+    Ex - console.log("Start");
+         setTimeout(() => {
+           console.log("Timeout callback");
+         }, 0);
+         Promise.resolve().then(() => {
+           console.log("Promise microtask");
+         });
+         console.log("End");
+    Output - 
+    Start
+    End
+    Promise microtask
+    Timeout callback
+
+    Internal Working- 
+    🔹console.log("Start") → synchronous → runs immediately
+    🔹setTimeout → callback goes to Callback Queue (after 0 ms)
+    🔹Promise.then → callback goes to Microtask Queue
+    🔹console.log("End") → synchronous → runs immediately
+    🔹Event Loop checks: stack is empty → runs Microtask (Promise)
+    🔹After Microtasks, then Callback Queue (setTimeout)
+
+    If async code is not present then.
+    The Call Stack handles everything.
+    The Event Loop doesn't need to fetch anything from the queues.
+    The Event Loop is still there, but it's idle, doing nothing extra.
+    So: The Event Loop doesn't do anything special unless asynchronous tasks are present. But it’s always watching the Call Stack.
+
+    Real-world Analogy:
+    🔹The Call Stack is a chef.
+    🔹The Event Loop is the manager who checks if the chef is free.
+    🔹The Queues (microtasks and callbacks) are orders waiting to be cooked.
+    If there are no async orders, the chef cooks everything directly (sync functions), and the manager (Event Loop) just watches.
+    But when an async order (like a delivery) is placed, the manager steps in to bring it at the right time.
+
+
 
 Q. How JavaScript Code is executed?
 A. When JavaScript code is executed, Execution Context is created and it is called Global Execution Context.
@@ -76,6 +139,18 @@ A. Mechanism in JS where the variable declarations are moved to the top of the s
 •  In JS, before the code is executed, the variables get initialized to undefined.
 •  Arrow functions enact as variables and get "undefined" during the memory creation phase while functions actually get run.
 •  Whenever a JS program is run, a global execution block is created, which comprises of 2: Memory creation and Code execution.
+   Ex - hello();
+        function hello(){
+          console.log("Hello my Boy");
+         }
+         console.log(a);
+         var a = 5;
+   Uses - 
+   During the Memory Creation Phase, JS prepares variable/function space in memory, so:
+   🔹It knows what exists (var, function)
+   🔹Even before actual code runs
+   🔹Helps avoid some runtime crashes
+
 
 
 
@@ -136,7 +211,7 @@ A. 1. Code inside curly bracket is called block.
 Q. Tell me difference b/w var, let and const?
 A. Var -
 •  We can get value of [ var a = 9 ] before intialization of value becz its value is stores in Global EC.
-   console.log(a);
+   console.log(a); //undefined
    var a = 9;
 •  We can create same variable name with different intialization value and it will give last intialised.
    var a = 7;
@@ -171,7 +246,7 @@ A. Var -
    const a;
    a = 8;
    console.log(a); //Output [ Uncaught SyntaxError: Missing initializer in const declaration. ]
-•  When we declare a value in block scope. So we can not access it becz value stores at separete memory in block..
+•  When we declare a value in block scope. So we can not access it becz value stores at separete memory in block.
    {
        const a = 8;
    }
@@ -305,7 +380,7 @@ A.  1. Normal Named Function -
 
 Q. What is Callback Function?
 A. 1. A callback function is a function passed as an argument to another function, which is then invoked inside the outer function to complete some kind of routine or action.
-   2. setTimeout helps turn JS which is sinhlethreaded and synchronous into asynchronous.
+   2. setTimeout helps turn JS which is singlethreaded and synchronous into asynchronous.
    3. Event listeners can also invoke closures with scope.
    4. Event listeners consume a lot of memory which can potentially slow down the website therefore it is good practice to remove if it is not used.
    Uses - 
