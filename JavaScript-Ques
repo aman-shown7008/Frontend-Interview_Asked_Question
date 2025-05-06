@@ -556,7 +556,11 @@ A.
 
 
 Q.  What is CORS Policy?
-A. 
+A.  CORS[Cross-Origin Resource Sharing] is used to block unwanted HTTP requests (from different origins) that are not allowed by the backend using the Access-Control-Allow-Origin header.
+    If you're trying to fetch data from localhost:3000 but the backend hasn't allowed that port, the browser will throw a CORS error.
+    This protects your data from unauthorized access by unknown websites or ports.
+    Access-Control-Allow-Origin: http://localhost:3000
+
 
 
 
