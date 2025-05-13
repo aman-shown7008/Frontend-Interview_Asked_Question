@@ -1,1 +1,20 @@
+1.  What is ServiceNow? And why we use it.
+A.  ServiceNow is a platform used to manage and automate workflows — like HR management, IT support, customer service, hotel management, etc.
+    If we do not use it then - 
+    In a company, employees need services too:
+    Laptop not working? 🧑‍💻
+    Need to apply leave? 🏖️
+    Raise a complaint to HR? 📣
+    Ask for software access? 🔐
+    Instead of calling or emailing different departments, they just use ServiceNow — one place to request anything and track it live.
 
+    Without ServiceNow:
+    You work at a company. Your laptop breaks. You email the IT department. Someone replies after hours asking for more details. You reply again. Then it gets forwarded to the right person. Maybe it gets lost. You keep following up. It's chaotic, slow, and disorganized.
+
+    With ServiceNow:
+    You open a self-service portal and submit an IT ticket for your laptop issue.
+    ServiceNow automatically routes it to the right IT team based on your issue.
+    You get updates in real time (status: “In Progress,” “Assigned,” “Resolved”).
+    The IT technician sees all necessary info (device, user history) in one place.
+    When resolved, you get a notification and can give feedback.
+    🔁All this is logged, tracked, and reportable.
