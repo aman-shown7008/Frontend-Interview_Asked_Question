@@ -21,4 +21,42 @@ A.  ServiceNow is a platform used to manage and automate workflows — like HR m
 
 
 
-2.  
+2.  Common Terms - 
+A.  Concept You Mentioned	                            Correct ServiceNow Term
+        HR Management      	                      Application / Module (e.g., HRSD)
+      Functionality Flow	                      Workflow / Flow Designer Flow
+       Business Logic Path	                      Process / Business Rule / Flow
+
+    🔁Analogy:
+    Think of an Instance like a house. Inside the house:
+    HR = one room (Application)
+    ITSM = another room
+    Flows = electrical wiring (Workflow logic)
+    Users = the people living in it
+
+    🏠Instance in Real-Life Terms:
+    Think of a ServiceNow Instance like your own private office building:
+    🏢The building (instance) is yours — no one else can enter unless you allow them.
+    Inside that building, you can:
+    Set up departments like HR, IT, Finance (apps/modules)
+    Define how people work (workflows/processes)
+    Decide who gets access to which rooms (roles/permissions)
+
+    🧠In Simple Terms:
+    A ServiceNow Instance is your own separate copy of the ServiceNow platform, where your organization can build, manage, and automate its internal processes.
+
+    Service-Portal: This provide a User-friendly self service experience it is an advanced UI of ServiceNow platform which provide access to specific features by using differnet widgets which can be customized and developed by ServiceNow developes. In this users can search knowledge articles request for any service.
+    Catalog: They can request something directly to service portal.
+    Request: They can see there own request.
+
+    Support Authentication by ServiceNow - 
+    Local Database - In this user and password is saved in servicenow instance in realted user racket.
+    SSO - In this user is authenticated with detail provided by identity provider. For ex - Okhta is identity provider.
+    LDAP - In this user is authenticated by a lightweight directory account O auth 2.0 by clientID and secretID by servicenow to consumer.
+    Digest Token - Encrypted Username and password in the form of token is also supported & that is digest token.
+    Multi-Factor - In this authentication is done by OTP code provided by google authenticator.
+
+    In this we are going to have ROLE-BASED ACCESS to protech sensitive data acc to role based.
+    ITIL, ADMIN, KNOWLEDGE ADMIN, APPROVER.
+    
+    
