@@ -1,3 +1,7 @@
+Basics - 
+Version - The current ServiceNow release is Xanadu, released in Q4 2024. The next release, Yokohama, is scheduled for Q1 2025. ServiceNow releases two new versions each year. 
+
+
 1.  What is ServiceNow? And why we use it.
 A.  ServiceNow is a platform used to manage and automate workflows — like HR management, IT support, customer service, hotel management, etc.
     If we do not use it then - 
@@ -58,5 +62,30 @@ A.  Concept You Mentioned	                            Correct ServiceNow Term
 
     In this we are going to have ROLE-BASED ACCESS to protech sensitive data acc to role based.
     ITIL, ADMIN, KNOWLEDGE ADMIN, APPROVER.
-    
+
+
+
+3.  User Interface & Branding.
+    Elements of Service Now UI.
+    How Role Based access works.
+    Application navigator favorites.
+    Navigation User Interface.
+A.  Profile - We can see details of that profile.
+    Impersonate user - This enables other user view the profile.
+    Elevate role - This elavate the role of loggedin User.
+
+
+
+4.  List, Filters and Forms.
+A.  List, Filters of Administration
+    Form- How forms shows data in a table component OR Form personalization OR Customization from templates.
+          A form displays information from one record in a data table.
+    Form Configuration - The fields and layouts of the form can be configured servicenow admins can perform this configuration overall you can change the form design with two different options one is form layout in which you can create new views new fields and aadjust the layout of the form visible for the users.
+    Form Design - Which is kind of advanced way to create field and adjust design on the from. We can also select the views by a form designas well as you can configure the form layout by right click on title bar of the form where you canb see.
+
+
+
+5.  Task Management.
+A.  Task - A task is any record that can be assigned or completed by a User in serviceNow. Users create tasks that are notified as the tasks moves along a workflow. Tasks can be assigned to user OR user groups.
+    Task Management - In ServiceNow helps track and manage work like incidents, problems, or changes through tasks. It ensures tasks are assigned, prioritized, and completed efficiently within workflows.
     
