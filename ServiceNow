@@ -88,4 +88,40 @@ A.  List, Filters of Administration
 5.  Task Management.
 A.  Task - A task is any record that can be assigned or completed by a User in serviceNow. Users create tasks that are notified as the tasks moves along a workflow. Tasks can be assigned to user OR user groups.
     Task Management - In ServiceNow helps track and manage work like incidents, problems, or changes through tasks. It ensures tasks are assigned, prioritized, and completed efficiently within workflows.
+
+
+
+6.  Notification-
+A.  OutBound Notification - When serviceNow sends notification & that is received by a user. 
+    Ex - Incident is assign to a group then all group members receive a email notification about the assignment of the ticket in their Queue.
+    InBound Notification - When users responds to the email receive OR create new email and send it to servicenow.  It can basically perform some action on the records of table.   
+    Ex - User can mark email in your instance email address and serviceNow can process that email & create incident racket and populate the fields as per information mentioned in email notification.
+
+   System Notification - It has basically three different sections for different modules.     
+   Email - It has modules related to modules notifications.                  
+   Push - It has modules related to mobile push notifications.     
+   Provider - It has modules to configure notifications for agent workspace and virtual agent which has separate applications of serviceNow.      
+
+   OOB[ Out of Box ] Notification - It has configured for existing modules and notification provided by serviceNow like incident, change, problem management OR request notification     Notification Form - ServiceNow admins can create new notification.      
+   Email Script - You can also add custom scripts in your notification to make content of notification more dynamic.
+
+   We can Create Notification-
+   System Notification > Notification > Fill Form.
+   For Testing a Notification - 
+   Incident > Open
+   To see a Notification - 
+   emails > System Logs -> emails.
+
+
+
+
+
+
+
+
+
+   TestCases - 
+   [1] -
+   [2] - 
+
     
