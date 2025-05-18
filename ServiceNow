@@ -123,5 +123,28 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
    TestCases - 
    [1] -
    [2] - 
-
+   [3] - System Notification → Email → Notifications → New
+   [4] - 
+   [5] - 
+   [6] - 
+   [7] - 1- System Notification → Email → Notifications → New[ Create Notification ]
+         2- System Policy → Events → Registry[ Register Event Name ]
+         3- System Definition → Scheduled Jobs → Scheduled Script Executions[ To Schdule a Event ] 
+   [8] - 
+   [9] - 
+   [10] - 
+   [11] -  Flow Designer > New
+   [12] - 
+   [13] - 
+   [14] - 
+   [15] - 
+   [16] - System Notification → Email → Notifications → New
+   [17] - 
+   [18] - System Notification → Email → Notifications → New
+   [19] - 
+   [20] - System Notification → Email → Notifications → New
+   [21] - 
+   [22] - 
+   [23] - 
+   [24] - 
     
