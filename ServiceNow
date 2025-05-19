@@ -63,6 +63,20 @@ A.  Concept You Mentioned	                            Correct ServiceNow Term
     In this we are going to have ROLE-BASED ACCESS to protech sensitive data acc to role based.
     ITIL, ADMIN, KNOWLEDGE ADMIN, APPROVER.
 
+    👤 Users: Individual people who use ServiceNow (e.g., employees, agents, managers).
+    Example: John Doe (a service desk agent).
+    Use: Can log in and perform tasks assigned based on their roles.
+
+    🔐Roles: Permissions assigned to users to control access.
+    Example: itil (for incident management), admin (full access).
+    Use: Define what a user can do (like read/write/update records).
+
+    👥Groups: Collection of users with similar responsibilities.
+    Example: "Network Support", "HR Helpdesk".
+    Use: For assigning tasks, approvals, notifications, or managing access in bulk.
+
+
+
 
 
 3.  User Interface & Branding.
@@ -124,16 +138,27 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
    [1] -
    [2] - 
    [3] - System Notification → Email → Notifications → New
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D46a1e9e5c3e56e10dbc11c65e4013153%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [4] - 
    [5] - 
    [6] - 
    [7] - 1- System Notification → Email → Notifications → New[ Create Notification ]
          2- System Policy → Events → Registry[ Register Event Name ]
          3- System Definition → Scheduled Jobs → Scheduled Script Executions[ To Schdule a Event ] 
-   [8] - 
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D51d2c269c3696e10dbc11c65e40131d3%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_view%3Dadvanced%26sysparm_view_forced%3Dtrue
+   [8] - System Definition > Business Rules
+         Name: Auto-assign Assignment Group
+         Table: Incident
+         Active: ✅ (Checked)
+         Advanced: ✅ (Check this to show scripting field)
+         When: Set to before
+         Insert: ✅ (Checked)
+         Update: ✅ (Checked)
+         Add Conditions (No Scripting Yet): Category is → (select your desired category, e.g., “Software”) && Subcategory is → (select subcategory, e.g., “Email”).
+         For Testing - Go to Incident > Create New
    [9] - 
    [10] - 
-   [11] -  Flow Designer > New
+   [11] - Flow Designer > New 
    [12] - 
    [13] - 
    [14] - 
@@ -141,7 +166,7 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
    [16] - System Notification → Email → Notifications → New
    [17] - 
    [18] - System Notification → Email → Notifications → New
-   [19] - 
+   [19] - System Definition > Business Rules ->  System Notification → Email → Notifications → New
    [20] - System Notification → Email → Notifications → New
    [21] - 
    [22] - 
