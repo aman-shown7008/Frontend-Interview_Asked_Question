@@ -136,12 +136,14 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
 
    TestCases - 
    [1] - Users > Existing Users.
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_user.do%3Fsys_id%3Da8f98bb0eb32010045e1a5115206fe3a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D631%26sysparm_record_list%3DORDERBYname
    [2] - 
    [3] - System Notification → Email → Notifications → New
-         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D46a1e9e5c3e56e10dbc11c65e4013153%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D46a1e9e5c3e56e10dbc11c65e4013153%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnulll
    [4] - System UI > UI Policies
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3De32194eac3ed6250dbc11c65e4013137%26sysparm_record_list%3Dshort_descriptionSTARTSWITHMake%2Bfields%2Bread-only%2Bwhen%2BOn%2BHold%255EORDERBYorder%26sysparm_record_row%3D1%26sysparm_record_rows%3D1%26sysparm_record_target%3Dsys_ui_policy
    [5] - Reports > New 
-   [6] - 
+   [6] - https://dev347964.service-now.com/nav_to.do?uri=%2Fsys_report_template.do%3Fjvar_report_id%3D3977a4e6c361a250dbc11c65e4013133
    [7] - 1- System Notification → Email → Notifications → New[ Create Notification ]
          2- System Policy → Events → Registry[ Register Event Name ]
          3- System Definition → Scheduled Jobs → Scheduled Script Executions[ To Schdule a Event ] 
@@ -156,19 +158,30 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
          Update: ✅ (Checked)
          Add Conditions (No Scripting Yet): Category is → (select your desired category, e.g., “Software”) && Subcategory is → (select subcategory, e.g., “Email”).
          For Testing - Go to Incident > Create New
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D4aa6915ec3216250dbc11c65e40131d9%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [9] - 
    [10] - System Notification → Email → Notifications → New
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D5f8c38a2c3e1a250dbc11c65e401311c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [11] - Flow Designer > New 
-   [12] - 
+          https://dev347964.service-now.com/now/workflow-studio/builder%3Ftable%3Dsys_hub_flow%26sysId%3D95262786c3292250dbc11c65e401319e
+   [12] - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D0ee03ce2c3a1a250dbc11c65e401316a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [13] - 
    [14] - 
-   [15] - 
+   [15] - Group > New,  assignment, Test-> Incident
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysrule_assignment.do%3Fsys_id%3De58fe9e2c3e5a250dbc11c65e40131f6%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3Da83820b58f723300e7e16c7827bdeed2%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D1%26sysparm_record_list%3Dcaller_id%253djavascript%253ags.getUserID()%255eactive%253dtrue%255euniversal_requestISEMPTY%255eORDERBYcaller_id
    [16] - System Notification → Email → Notifications → New
-   [17] - 
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3Da5082082c3a9ee10dbc11c65e4013196%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+   [17] - https://dev347964.service-now.com/now/nav/ui/classic/params/target/problem.do%3Fsys_id%3D-1%26sysparm_stack%3Dproblem_list.do
    [18] - System Notification → Email → Notifications → New
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D01c05aa9c3a96e10dbc11c65e401310e%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [19] - System Definition > Business Rules ->  System Notification → Email → Notifications → New
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D3b34295ec3616250dbc11c65e4013121%26sysparm_view%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [20] - System Notification → Email → Notifications → New
-   [21] - 
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D40f0e8cac369ee10dbc11c65e4013189%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+   [21] - System Notification → Email → Notifications → New
+          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3Dd56485eac3e1a250dbc11c65e4013129%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
    [22] - 
    [23] - Reports > New 
+          https://dev347964.service-now.com/nav_to.do?uri=%2Fsys_report_template.do%3Fjvar_report_id%3Da925e462c361a250dbc11c65e4013187
     
