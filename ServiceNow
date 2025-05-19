@@ -139,7 +139,7 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
    [2] - 
    [3] - System Notification → Email → Notifications → New
          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sysevent_email_action.do%3Fsys_id%3D46a1e9e5c3e56e10dbc11c65e4013153%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
-   [4] - 
+   [4] - System UI > UI Policies
    [5] - 
    [6] - 
    [7] - 1- System Notification → Email → Notifications → New[ Create Notification ]
