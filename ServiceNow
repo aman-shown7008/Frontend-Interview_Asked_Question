@@ -128,7 +128,77 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
 
 
 
-   UI Policies - allow you to make fields read-only, mandatory, or hidden based on specific conditions like the value of a field.-[ 4 ]
+   Questions-
+   1. What is User Management and Data Management?
+   A. User Management - It deals with who is using ServiceNow and what they can do.
+      | Feature           | Description                                                           |
+      | ----------------- | --------------------------------------------------------------------- |
+      | **Users**         | People who can log in (admins, employees, managers, etc.)             |
+      | **Groups**        | Collection of users (e.g., IT Support, HR Team) — used for assignment |
+      | **Roles**         | Permissions given to users or groups (e.g., `admin`, `itil`)          |
+      | **User Roles**    | What a specific user can access or do based on their role             |
+      | **Delegation**    | Assign another user to act on your behalf                             |
+      | **Impersonation** | Admins can act as another user to test or troubleshoot                |
+
+      🔹Main Goal: Control who can access what features, forms, or records.
+
+      Data Management - Deals with what data is stored, how it is organized, and how to maintain or protect it.
+      | Feature                   | Description                                                            |
+      | ------------------------- | ---------------------------------------------------------------------- |
+      | **Tables**                | Store data (like Incident, User, Change, etc.)                         |
+      | **Fields (Columns)**      | Attributes of the data (e.g., Priority, State, Description)            |
+      | **Forms and Views**       | How the data looks when a user opens a record                          |
+      | **Data Import**           | Load external data using import sets                                   |
+      | **Transform Maps**        | Define how data from imports gets mapped to ServiceNow tables          |
+      | **Data Policies**         | Enforce rules on data (e.g., make field mandatory even during import)  |
+      | **Dictionary**            | Definitions of tables, fields, types, default values, etc.             |
+      | **ACLs (Access Control)** | Control who can read, write, or delete specific records                |
+      | **Record Producers**      | Forms for users to create records (like requesting hardware or issues) |
+   🔹When a user logs in, what they see and can do = User Management.
+   🔹When a user submits a form or data is imported, how that data is validated and stored = Data Management.
+
+
+
+   2. What is Application and Modules?
+   A. Application - An Application is a collection of related modules that perform a specific function or serve a business purpose.
+      It's like a folder that groups related features together.
+      Example: Incident Application includes everything related to incident management.
+
+      Module - A Module is a specific functionality or feature inside an application.
+      It appears in the left navigation menu, under an application.
+      Modules can be:
+      🔸Forms (e.g., Create New)
+      🔸Lists (e.g., Open Incidents)
+      🔸Reports
+      🔸Dashboards
+      🔸Scripted pages
+
+
+
+   3. What is Form Changes?
+   A. Its refer to customizing or modifying a form in ServiceNow so that users can interact with fields/data in a more meaningful way.
+      A form in ServiceNow is the UI you see when you open any record (like an Incident or Change Request).
+      Key Topics - 
+      | Topic                   | Description                                                                  |
+      | ----------------------- | ---------------------------------------------------------------------------- |
+      | **Form Layout**         | How fields, sections, and tabs are arranged on the form.                     |
+      | **Form Design**         | A visual drag-and-drop tool to design forms.                                 |
+      | **Form View**           | Different views for different user roles or needs (e.g., Default, ESS View). |
+      | **Form Sections**       | Grouping fields into logical blocks (like "Details", "Resolution", etc.)     |
+      | **Form Fields**         | The individual fields on a form (like Caller, Short Description, etc.)       |
+      | **UI Policies**         | Used to show/hide or make fields read-only or mandatory.                     |
+      | **Client Scripts**      | JavaScript that runs on the form in the browser (client-side).               |
+      | **Dictionary Settings** | Settings that define how fields behave globally (like max length, default).  |
+      | **Form Annotations**    | Labels, help text, etc. that you can place for instructions.                 |
+      | **Form Views vs Lists** | Forms show **one record**; lists show **many records**.                      |
+
+
+
+
+
+      UI Policies allow you to make fields read-only, mandatory, or hidden based on specific conditions like the value of a field.-[ 4 ]
+
+
 
    Reports - Reports in ServiceNow help you see and understand your data in a visual way — like charts, tables, and graphs.
    Types of Reports - 
