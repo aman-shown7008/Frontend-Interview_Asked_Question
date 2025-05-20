@@ -63,7 +63,7 @@ A.  Concept You Mentioned	                            Correct ServiceNow Term
     In this we are going to have ROLE-BASED ACCESS to protech sensitive data acc to role based.
     ITIL, ADMIN, KNOWLEDGE ADMIN, APPROVER.
 
-    👤 Users: Individual people who use ServiceNow (e.g., employees, agents, managers).
+    👤Users: Individual people who use ServiceNow (e.g., employees, agents, managers).
     Example: John Doe (a service desk agent).
     Use: Can log in and perform tasks assigned based on their roles.
 
@@ -128,6 +128,42 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
 
 
 
+   UI Policies - allow you to make fields read-only, mandatory, or hidden based on specific conditions like the value of a field.-[ 4 ]
+
+   Reports - Reports in ServiceNow help you see and understand your data in a visual way — like charts, tables, and graphs.
+   Types of Reports - 
+   Bars - Compare individual or aggregate scores across data dimensions.
+   Pies and Donuts - Pies and Donuts show the proportions that make up a whole.
+   Time series - Visualize data over time.
+   Multidimensional reports - Visualize data using multiple dimensions.
+   Scores - Visualize a single data point.
+   Other - There are even more chart types to choose from.
+             You use reports to answer questions like:
+             How many incidents were created this month?
+             Which team has the most tasks?
+             What’s the average resolution time?
+
+   Notification - A Notification in ServiceNow is used to automatically send emails when certain conditions are met — like a record is created, updated, or a specific field changes.
+   There are three sections to configure in a Notification.
+   When to send
+   Who will receive
+   What it will contain
+
+   System Policy - System Policy in ServiceNow refers to rules that control how data behaves in the system — without writing complex code.
+   These policies help enforce data consistency, control field behavior, and trigger events. Think of them as the “rules engine” for forms and records.
+   1. Data Policies - Enforce rules on records at both UI and import levels.
+                      Make fields mandatory, read-only, or hidden — even during data import (like CSV or API).
+                     ✅Works on the server side and UI (if "Apply to UI" is checked).
+   Ex - Make Short Description mandatory when Category is Inquiry.
+   2. UI Policies - Control the behavior of form fields in the browser (client-side).
+                    Make fields mandatory, read-only, or hidden, based on conditions.
+                   ✅Works only in the UI/form — not during data import.
+   Ex - When State = On Hold, make Assignment Group field read-only.
+   3. UI Policy Actions - The actual actions (what to do) of a UI Policy.
+                          Like: "Make field X read-only", "Show field Y", etc.
+
+
+   
 
 
 
@@ -143,7 +179,9 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
    [4] - System UI > UI Policies
          https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3De32194eac3ed6250dbc11c65e4013137%26sysparm_record_list%3Dshort_descriptionSTARTSWITHMake%2Bfields%2Bread-only%2Bwhen%2BOn%2BHold%255EORDERBYorder%26sysparm_record_row%3D1%26sysparm_record_rows%3D1%26sysparm_record_target%3Dsys_ui_policy
    [5] - Reports > New 
-   [6] - https://dev347964.service-now.com/nav_to.do?uri=%2Fsys_report_template.do%3Fjvar_report_id%3D3977a4e6c361a250dbc11c65e4013133
+         https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_report_template.do%3Fjvar_report_id%3Dundefined
+         https://dev347964.service-now.com/nav_to.do?uri=%2Fsys_report_template.do%3Fjvar_report_id%3D3977a4e6c361a250dbc11c65e4013133
+   [6] - 
    [7] - 1- System Notification → Email → Notifications → New[ Create Notification ]
          2- System Policy → Events → Registry[ Register Event Name ]
          3- System Definition → Scheduled Jobs → Scheduled Script Executions[ To Schdule a Event ] 
