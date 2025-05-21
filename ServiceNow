@@ -4,24 +4,30 @@ Version - The current ServiceNow release is Xanadu, released in Q4 2024. The nex
 
 1.  What is ServiceNow? And why we use it.
 A.  ServiceNow is a platform used to manage and automate workflows — like HR management, IT support, customer service, hotel management, etc.
-    If we do not use it then - 
-    In a company, employees need services too:
-    Laptop not working? 🧑‍💻
-    Need to apply leave? 🏖️
-    Raise a complaint to HR? 📣
-    Ask for software access? 🔐
-    Instead of calling or emailing different departments, they just use ServiceNow — one place to request anything and track it live.
+    🧑‍💼Without ServiceNow:
+    You face an issue (e.g., laptop not working)
+    You email IT… then wait
+    Someone replies asking for more info
+    You reply again
+    It gets forwarded… maybe lost
+    You follow up again and again
+    🔁 This leads to delays, confusion, and frustration
 
-    Without ServiceNow:
-    You work at a company. Your laptop breaks. You email the IT department. Someone replies after hours asking for more details. You reply again. Then it gets forwarded to the right person. Maybe it gets lost. You keep following up. It's chaotic, slow, and disorganized.
+    ✅With ServiceNow:
+    You go to a Self-Service Portal
+    Submit a request with all required info
+    The request auto-assigns to the right team
+    You get real-time status updates ("In Progress", "Resolved")
+    The support team sees all info in one place (your device, history, etc.)
+    You’re notified when it's done and can give feedback
+    Everything is logged, trackable, and reportable
 
-    With ServiceNow:
-    You open a self-service portal and submit an IT ticket for your laptop issue.
-    ServiceNow automatically routes it to the right IT team based on your issue.
-    You get updates in real time (status: “In Progress,” “Assigned,” “Resolved”).
-    The IT technician sees all necessary info (device, user history) in one place.
-    When resolved, you get a notification and can give feedback.
-    🔁All this is logged, tracked, and reportable.
+    🚀Key Benefits of ServiceNow:
+    One platform for all internal requests (IT, HR, Facilities, etc.)
+    Faster response and resolution times
+    No need to chase emails or phone calls
+    Better accountability and transparency
+    Improved employee experience
 
 
 
@@ -292,4 +298,215 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
    [22] - 
    [23] - Reports > New 
           https://dev347964.service-now.com/nav_to.do?uri=%2Fsys_report_template.do%3Fjvar_report_id%3Da925e462c361a250dbc11c65e4013187
-    
+
+
+
+   Assesment-1 Ques
+   1. Data Policy and UI policy , (Client Side  v/s  Server Side) in detail.
+   A. ✅UI Policy
+      Purpose: To dynamically change the behavior of fields on forms.
+      Executes on: Client Side (in the browser)
+      Use Cases:
+      Make a field mandatory, read-only, or hidden based on conditions.
+      Example: If "State = Closed", make "Resolution Notes" mandatory.
+      Key Point: Only affects form views used by humans (not imports/API).
+      ✅Data Policy-
+      Purpose: To enforce mandatory or read-only rules on data, even outside of the UI.
+      Executes on: Server Side
+      Use Cases:
+      Enforce business rules regardless of how data is entered (UI, script, import, REST).
+      Example: Make “Email” mandatory during CSV data import.
+      Key Point: Applies to all data entry points, not just forms.
+
+     Use UI Policy:
+     When you want to change form behavior (hide fields, show messages, etc.)
+     When it's purely UI-focused (for human users).
+
+     Use Data Policy:
+     When you want to enforce rules across forms, APIs, imports, and workflows.
+     For ensuring data integrity no matter where it comes from.
+
+     | 🔹 **Feature**                    | 💻 **Client Side**                                                | 🖥️ **Server Side**                                      |
+     | --------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------- |
+     | **Runs On**                       | User’s browser (UI/form)                                          | Server/backend (ServiceNow instance)                     |
+     | **Speed**                         | Faster (no need to go to the server)                              | Slower (requires server communication)                   |
+     | **Used For**                      | Form behavior (hide/show fields, make fields mandatory/read-only) | Business logic, data processing, database operations     |
+     | **Examples**                      | - UI Policy  <br> - Client Script <br> - Form Design              | - Business Rule <br> - Script Include <br> - Data Policy |
+     | **Scope**                         | Only on form when user interacts with UI                          | Applies globally (UI, imports, APIs, background scripts) |
+     | **Security**                      | Less secure (users can inspect or bypass in browser)              | More secure (logic is hidden from user)                  |
+     | **Scripting Languages**           | JavaScript (limited APIs)                                         | JavaScript (with Glide API)                              |
+     | **When to Use**                   | Improve user experience <br> Validate before form submission      | Validate data <br> Trigger actions after saving to DB    |
+     | **Can access database directly?** | ❌ No                                                              | ✅ Yes                                                    |
+     | **Example Use Case**              | Make “Comments” field mandatory if “State = Closed”               | Auto-assign group based on Category after insert/update  |
+
+
+
+   2. What is Dictionary, Attributes, Dictionary Override?
+   A. Dictionary - A Dictionary entry defines how a field (column) behaves in a table.
+                   It controls field type, length, mandatory status, default values, etc.
+      Ex - If you create a field Phone Number in the User table:
+           Type: String
+           Max Length: 10
+           Mandatory: Yes
+           This setup is done via the Dictionary.
+
+      Attributes - Attributes are extra settings you apply to control field behavior.
+                   You add them as comma-separated text inside the Dictionary entry.
+      | Attribute                               | Purpose                                  |
+      | --------------------------------------- | ---------------------------------------- |
+      | `readonly=true`                         | Makes field read-only                    |
+      | `email=true`                            | Validates email format                   |
+      | `ref_auto_completer=AJAXTableCompleter` | Enables autocomplete in reference fields |
+      | `default_role=itil`                     | Sets default role in reference field     |
+
+      Dictionary Override - Used when a field is inherited (e.g., from a parent table), and you want to change its properties in a child table only.
+      You override things like:
+      Mandatory
+      Default Value
+      Read-only
+      Reference Qualifier
+
+
+
+   3. What is Assignment Rule, Assignment lookup, Priority Lookup, Data Lookup.
+   A. 🔸Assignment Rule - Used to automatically assign a task (like an incident or request) to the correct group or user based on conditions.
+      Ex - If the incident Category = Network, assign it to the Network Support group.
+      🔸Assignment Lookup Rules - Looks up a predefined table to auto-assign based on matching field values.
+      Ex - If Location = Bangalore and Category = Hardware, assign to Bangalore Hardware Team.
+      🔸Priority Lookup Rules - Automatically sets Priority based on Impact and Urgency.
+      Ex - Impact = High, Urgency = Medium → Then Priority = 2 (High).
+      🔸Data Lookup Rules - Used to auto-populate any field (like Assignment Group, Location, etc.) based on conditions.
+      Ex - Configuration Item = Printer , Location = Delhi → Then Assignment Group = Printer Support Delhi
+
+
+
+   4. What is Form, List and Views?
+   A. Form - A Form is a single record's detailed view.
+             It shows fields (like Caller, Short Description, Priority) where users can view, enter, or edit data.
+             Configure > Form Layout.
+      List - A List shows multiple records in a table (like all incidents).
+             It’s like a spreadsheet with columns and rows.
+             Configure > List Layout
+      View - A View is a custom layout of a Form or List for specific users/roles.
+             Example: Manager View (with extra fields) vs. Self-Service View (limited fields)
+             Configure > Form Design
+
+
+   5. What is Table? Type of relations in Tables.  (how to inherit).
+   A. A Table is like a spreadsheet where data is stored in rows (records) and columns (fields).
+      Everything in ServiceNow — incidents, users, tasks — is stored in tables.
+      Types of Tables:
+      Base Table - A table with no parent.
+                  Ex: Task is a base table.
+      Extended Table - A child table that inherits fields from a base table.
+      Ex: Incident, Change Request, and Problem all extend the Task table.
+
+
+
+   6. What is Changes. Types of Changes  (Request   changes,   _________,   more).
+   A. In ServiceNow, "Changes" refer to the process of managing updates or modifications in IT systems in a controlled and auditable way. Change Management is a key part of ITSM (IT Service Management).
+      Types of Chnages.
+      |   **Change Type**    |             **Description**                                               |
+      | -------------------- | ------------------------------------------------------------------------- |
+      | **Standard Change**  | Pre-approved, low-risk, repeatable changes (e.g., adding printer drivers) |
+      | **Normal Change**    | Non-emergency changes that go through full approval and assessment        |
+      | **Emergency Change** | Critical, urgent changes to fix a major incident or outage                |
+      Change > Administration > Change Models
+
+
+
+   7. What is View.
+   A. A View in ServiceNow defines how forms or lists appear for users. You can create different views for different roles, use cases, or departments.
+
+
+
+   8. 
+   A. In ServiceNow, making a field mandatory (required) ensures that users provide necessary information before submitting or saving a record. 
+      There are several best practices depending on how and when you want the field to be mandatory.
+
+      1. Using the Dictionary- 
+      Navigate to the field via:
+      System Definition → Dictionary
+      Search for the field and open it.
+      Check the Mandatory checkbox.
+      Save the record.
+
+      2. Using UI Policies- 
+      You want the field to be mandatory based on conditions (e.g., only on certain forms or values).
+      Go to:
+      System UI → UI Policies
+      Click New.
+      Select the table (e.g., Incident) and define the condition.
+      In the UI Policy Actions related list, click New.
+      Choose the field, and set Mandatory = True.
+
+
+
+   9. Incident (How to change Date format).
+   A. Navigate to: System Properties → System → Date/Time.
+      glide.sys.date_format – Format for Date fields
+      Example: yyyy-MM-dd
+
+
+
+   10. 
+   A. The "Locked out" checkbox on the User [sys_user] record prevents a user from logging in.
+     🔒How to Use:
+     Navigate to:
+     User Administration → Users
+     Open the user record.
+     Check or uncheck the "Locked out" checkbox.
+     Checked: User is locked out of the system.
+     Unchecked: User can log in normally.
+     Click Save or Update.
+
+    🔐When to Use:
+    After multiple failed login attempts.
+    Security concerns or suspended access.
+    Compliance reasons.
+
+    Assign Roles to the Users: 
+    Steps:
+    Navigate to: User Administration → Users
+    Open the user record.
+    Scroll to the Roles related list.
+    Click Edit.
+    In the slushbucket, move roles (e.g., admin, itil, approver_user) from left to right.
+    Click Save.
+
+
+
+    11. What is role? How to create new role and How to assign role to a User.
+    A.  A role in ServiceNow is a collection of permissions that controls what a user can see and do in the platform.
+        Roles are used to grant access to applications, modules, records, fields, and actions.
+        Ex - admin, itil.
+
+        How to Create a New Role- 
+        Steps:
+        Navigate to:
+        User Administration → Roles
+        Click New.
+        Fill in:
+        Name (e.g., custom_hr_analyst)
+        Description (optional but helpful)
+        Click Submit.
+
+        How to Assign a Role to a User
+        Direct Assignment via User Record
+        Navigate to:
+        User Administration → Users
+        Open the user record.
+        Scroll to the Roles related list.
+        Click Edit.
+        Select desired role(s) from the left and move to the right.
+        Click Save.
+
+
+    12. What is Backend name for particular table or group.
+     A. Steps to Find:
+        Navigate to:
+        System Definition → Tables
+        Search for your table (e.g., "Incident").
+        The "Name" column shows the backend name:
+        Incident → incident
+        Change Request → change_request
