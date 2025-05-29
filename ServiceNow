@@ -11,7 +11,7 @@ A.  ServiceNow is a platform used to manage and automate workflows — like HR m
     You reply again
     It gets forwarded… maybe lost
     You follow up again and again
-    🔁 This leads to delays, confusion, and frustration
+    🔁This leads to delays, confusion, and frustration
 
     ✅With ServiceNow:
     You go to a Self-Service Portal
@@ -201,8 +201,6 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
 
 
 
-
-
       UI Policies allow you to make fields read-only, mandatory, or hidden based on specific conditions like the value of a field.-[ 4 ]
 
 
@@ -311,6 +309,7 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
       Make a field mandatory, read-only, or hidden based on conditions.
       Example: If "State = Closed", make "Resolution Notes" mandatory.
       Key Point: Only affects form views used by humans (not imports/API).
+      https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3D7ee7dd61c3b52610dbc11c65e4013195%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
       ✅Data Policy-
       Purpose: To enforce mandatory or read-only rules on data, even outside of the UI.
       Executes on: Server Side
@@ -350,6 +349,7 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
            Max Length: 10
            Mandatory: Yes
            This setup is done via the Dictionary.
+      https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_dictionary.do%3Fsys_id%3D26dd9329c3316610dbc11c65e40131aa%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull12
 
       Attributes - Attributes are extra settings you apply to control field behavior.
                    You add them as comma-separated text inside the Dictionary entry.
