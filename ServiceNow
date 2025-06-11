@@ -378,6 +378,7 @@ A.  OutBound Notification - When serviceNow sends notification & that is receive
       Ex - Impact = High, Urgency = Medium → Then Priority = 2 (High).
       🔸Data Lookup Rules - Used to auto-populate any field (like Assignment Group, Location, etc.) based on conditions.
       Ex - Configuration Item = Printer , Location = Delhi → Then Assignment Group = Printer Support Delhi
+      https://chatgpt.com/share/68490098-5fac-8013-bd51-0923a69cf92a
 
 
 
