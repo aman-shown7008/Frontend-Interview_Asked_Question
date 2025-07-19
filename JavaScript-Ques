@@ -550,8 +550,27 @@ A.  async and await are modern JavaScript keywords that make working with Promis
 
 
 
-Q.  What is debouncing & throttle? Uses.
-A.  
+Q.  What is Debouncing & Throttle? Uses.
+A.  Debouncing - Debouncing ensures a function is only executed after a delay (e.g. 300ms) once the user has stopped performing an action. If the action occurs again within that delay, the timer resets.
+    Ex: 🔍Search Input (API call on typing)
+        When a user types in a search box:
+        If they type "hello" and stop for 3 seconds, the search API is called.
+        If they type "hello", then "world" within 3 seconds, only the last input triggers the API.
+    Use - This avoids multiple API calls while the user is still typing — saving resources and improving performance.
+    🔍Why Search Box = Debouncing (Not Throttling)
+    In a search box, we only want to call the API once the user stops typing.
+    If we use throttling, it would make API calls at regular intervals even while the user is still typing, which leads to unnecessary API hits.
+    ✅Debouncing waits until typing stops, ensuring only the final input triggers the API.
+
+    Throttling - Throttling ensures a function is called at most once in a specified time interval (e.g. once every 2 seconds), regardless of how often the event is triggered.
+    Ex: 🔫Counting Bullets in a Shooting Game
+        If the player clicks rapidly to shoot bullets, throttling ensures that only 1 bullet is fired every 2 seconds, even if clicked 10 times.
+    Use - This controls the rate of execution — perfect when you want to limit action frequency, like scroll tracking, resizing, or firing bullets.
+    🔫Why Bullets = Throttling (Not Debouncing)
+    In a shooting game, the player may keep clicking rapidly to fire.
+    We want to limit firing to once per X ms, but still allow regular shooting.
+    If we use debouncing, firing would only happen after the player stops clicking, which is not suitable for real-time action.
+    ✅Throttling controls the rate, allowing bullets to fire at consistent intervals.
 
 
 
@@ -563,6 +582,26 @@ A.  CORS[Cross-Origin Resource Sharing] is used to block unwanted HTTP requests 
 
 
 
+Q.  What is Call, Apply & Bind? Use-case.
+A.  Call - Calls a function immediately, with a specific this value and arguments passed one by one.
+    Use - When you want to invoke a function immediately with a different object as this.
+    printFullName.call(name1, "Jaipur", "Lucknow");
+
+    Apply - Just like call(), but arguments are passed as an array.
+    Use - Useful when you already have arguments as an array or want to pass them in dynamically.
+    printFullName.apply(name2, ["Ranchi", "Indore"]);
+
+    Bind - Does not call the function immediately. Instead, it returns a new function with the given this and optionally preset arguments (partial application).
+    Use - When you want to store or reuse a function with a fixed this and optionally fixed arguments.
+          Useful in event handlers, callbacks, or when binding inside a class.
+    const printFull = printFullName.bind(name1, "Nagpur", "MP");
+    console.log(printFull); // function not executed yet
+    printFull(); // now it's executed
+
+
+
+Q.  What is Currying in JS? Use-case.
+A.  
 
 
 
