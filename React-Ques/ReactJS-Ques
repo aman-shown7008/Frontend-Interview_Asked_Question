@@ -1,0 +1,228 @@
+1. What is ReactJS?
+A. ReactJS is a JavaScript library for building User Interfaces and allows developers to create simple, fast, and scalable web applications.
+   ReactJS Current version - 19.0.[ December 5, 2024 ].
+   ReactJS Previous version - 18.2.0 [ June 14, 2022 ].
+   It is maintained by Facebook.
+   Its First Release was 29 May 2013.
+Ex - Component-Based Architecture:
+•  React organizes UI into reusable components, allowing developers to break down complex UIs into smaller, manageable pieces.
+•  It is a Single Page Application. means - [ It loaded whole website in single  time & If we want to navigate to different page we can easily navigate without loading. ]
+•  Components can be easily reused across the application, enhancing maintainability and scalability.
+•  Header Component: Contains the logo, navigation links, and maybe user profile info.
+•  Sidebar Component: Displays relevant shortcuts or additional navigation.
+•  Main Content Component: Shows the main content of the page.
+•  Footer Component: Includes copyright info, links, etc.
+   Its creates Single Page Application (SPA). Becz when we open any website i.e created by ReactJS. So it download all resource, page at one time.
+
+
+
+Q. How to create a React App?
+A. npx create-react-app first-proj
+   NPX is package runner & its getting download when we download node.js.
+
+
+
+Q. What is the difference between NPX and NPM exec?
+A. The command npm[ Node Package Manager ]  is used to download JavaScript packages from Node Package Manager, and
+   npx[ Node Package Executer] is used to execute JavaScript packages downloaded this way. 
+
+
+
+Q. Advantage & Features of ReactJS?
+A. Advantages:
+•  Virtual DOM: React uses a virtual DOM for faster updates and improved performance.
+•  Reusable Components: Components are modular and reusable, promoting code reusability and maintainability.
+•  Declarative: React follows a declarative programming paradigm, making it easier to understand and debug code.
+•  Efficient Rendering: React efficiently updates and renders only the necessary components when data changes, reducing unnecessary DOM manipulation.
+•  JSX: React uses JSX, a syntax extension that allows writing HTML within JavaScript, enhancing component readability and development speed.
+
+   Features:
+•  Component-based Architecture: React follows a component-based architecture, where UIs are built using reusable components.
+•  Unidirectional Data Flow: Data flows in one direction, from parent to child components, ensuring predictable and easier-to-understand data management.
+•  Lifecycle Methods: React provides lifecycle methods that allow developers to perform actions at specific stages of a component's lifecycle.
+•  State Management: React allows for stateful components, where state can be managed and updated to reflect changes in data.
+•  Ecosystem: React has a vast ecosystem of tools and libraries (e.g., Redux, React Router) that enhance its capabilities for building complex applications.
+
+
+
+Q. What is difference b/w DOM and Virtual DOM?-[ Use of this in Real life ].
+A. DOM - [ Documrnt Object Model ]
+   Document - HTML Document
+   Object - Elements like - h1, p , head
+   Model - Compelete Document
+
+   DOM - The Document Object Model (DOM) is like a tree-like structure that represents a web page in a way that computers can understand. 
+         It's used by web browsers to understand and manipulate the content, structure, and style of web pages. In simple terms, it's the programming interface that allows developers to interact with and change elements on a web page using code.
+         (e.g., elements, attributes, text).
+
+   Virtual DOM - It's a lightweight copy of the actual DOM maintained by the framework. When changes are made to the data in the application, the Virtual DOM is updated instead of directly manipulating the actual DOM. 
+                 Then, a process called reconciliation is used to efficiently update only the parts of the actual DOM that have changed, resulting in improved performance.
+
+   For Ex - In real life, the Virtual DOM allows developers to create dynamic web applications with better performance by minimizing direct manipulation of the actual DOM, which can be slow and resource-intensive.
+            This approach leads to smoother user experiences, especially in complex web applications with frequent updates and interactions.
+
+
+
+Q. What is difference b/w Class Components and Functional Components?
+A. 
+
+
+
+2. Difference between DOM and Virtual DOM?
+A. React uses a virtual representation of the DOM, which allows it to efficiently update only the necessary parts of the actual DOM when data changes.
+   This minimizes re-rendering, boosts performance, and results in faster updates for the user interface.
+
+
+
+Declarative Syntax:
+The declarative nature of React simplifies the process of creating UIs by specifying what the UI should look like based on the application state, rather than how to change the DOM.
+
+2. What is JSX?
+A. JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild( ) or createElement( ).
+Ex- const element = document.createElement('h1');
+    element.textContent = 'Hello, JSX!';
+    document.getElementById('root').appendChild(element);
+
+
+
+Q. What are Life Cycle methods and USES?
+A. 
+
+
+
+Q. What are difference between DOM events and Synthetic events with Use-Case?
+A. DOM Events:
+   DOM events are native browser events that occur when a user interacts with a web page. Examples include click, mouseover, keydown, etc. In React, you can attach event handlers directly to DOM elements using JSX syntax.
+
+   Synthetic Events:
+   React provides its own event system called Synthetic Events. These events are implemented to ensure consistent behavior across different browsers. They wrap the native DOM events and provide additional features and cross-browser compatibility. They behave identically to native events but are instances of SyntheticEvent. 
+
+•  Cross-Browser Compatibility: Developers would need to write code to handle the differences between how events are handled in different browsers. This would require additional testing and could lead to inconsistencies in behavior across browsers.
+•  Performance: Managing event listeners directly on DOM elements can be less efficient than React's event delegation model. Each event listener adds overhead, especially in applications with many interactive elements. Without the optimization provided by Synthetic Events, performance could suffer, especially in complex applications.
+
+
+
+Q. What is reconciliation?
+A. Reconciliation is the process through which React updates the Browser DOM and makes React work faster. React use a diffing algorithm so that component updates are predictable and faster. React would first calculate the difference between the real DOM and the copy of DOM (Virtual DOM) when there's an update of components. React stores a copy of Browser DOM which is called Virtual DOM. 
+   When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one. This comparison is done by Diffing Algorithm. Now React compares the Virtual DOM with Real DOM. It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called Reconciliation.
+
+ 
+
+Q. What are fragments and Use-Case?
+A. It's a common pattern or practice in React for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM. You need to use either or a shorter syntax having empty tag (<></>).
+ 
+   Use case:
+   Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+
+
+
+Q. What are error boundaries and Use-Case?
+A. Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application. They provide a way to gracefully handle errors that occur during rendering, lifecycle methods, or event handlers within a component subtree. Error boundaries are defined using the componentDidCatch lifecycle method.
+
+  Use case:
+  Imagine you have a complex application with various components rendering data fetched from an API. If an unexpected error occurs in one of these components, it could cause the entire application to crash, leading to a poor user experience. By wrapping parts of your application with error boundaries, you can isolate errors to specific components and display a user-friendly error message instead of crashing the entire app. This enhances the resilience and stability of your application, allowing users to continue using unaffected parts of the UI even if errors occur elsewhere.
+
+
+
+Q. What is React Router?
+A. React Router is a popular routing library for React applications that allows you to handle navigation and URL changes in a single-page application (SPA). It enables you to define routes, map them to specific components, and handle navigation between different views without requiring a page reload.
+   React Router v4 provides below 3 <Router> components:
+1. <BrowserRouter>
+2. <HashRouter>
+3. <MemoryRouter>
+
+
+
+Q. What is prop drilling in React?
+A. Prop Drilling happens when you pass data (props) from a parent component to a deeply nested child component, even though the intermediate components don’t need it.
+
+   Why is Prop Drilling a Problem?
+     🔹Unnecessary Passing → Components that don’t use the prop still need to pass it down.
+     🔹Hard to Maintain → If the structure changes, you have to update multiple components.
+
+   Solution for Prop Drilling
+    🔹React Context API – Allows sharing data without passing props manually.
+    🔹State Management (Redux, Zustand, Recoil) – Useful for complex applications.
+
+
+
+Q. What is Higher Order Component and Use-Case?
+A. A Higher-Order Component (HOC) is a function that takes a component as input and returns a new enhanced component.
+🔹 Think of it like a wrapper that adds extra functionality to a component without modifying its original code.
+
+
+
+Q. Explain Strict Mode in React.
+A. 
+
+
+
+Q. What is a Pure Component in React?
+A. A Pure Component in React is a component that only re-renders when its props or state change. 
+   It helps in optimizing performance by preventing unnecessary re-renders.
+
+  Use-case:
+  ✔ When components get re-rendered frequently with the same data.
+  ✔ When working with large lists or complex UI updates.
+
+
+
+Q. Why we use UseState if we can use Variable declaration?
+A. React does not track normal variables.
+   State ensures the UI updates automatically.
+   State persists between renders, unlike normal variables.
+   Using useState tells React to re-render the component when the value changes.
+
+
+
+----REACT-HOOKS----[ With USES ]
+Q. What is Hooks? Use-Case.
+A. Hooks are special functions introduced in React 16.8 that allow you to use features or functionalities provided by React in functional components.
+   Ex - Imagine there is a locked door, and you need a key to open it. The key provides access to the door’s functionality (opening and closing). Similarly, Hooks act as keys that unlock React features like state management, side effects, and context inside functional components.
+
+
+1. UseState Hooks -
+A. State is any data that can change dynamically in the UI. If a value updates and the UI reflects that change, it is considered state.
+   UseState Hook in React provides two things:
+   A variable → Stores the current state value.
+   A function → Updates the stored state dynamically.
+   Real-Life Example - Imagine a person wearing a red t-shirt. If they decide to change into a blue t-shirt, their clothing changes dynamically.
+                       The t-shirt represents the state (data stored in useState).
+                       The action of changing the t-shirt represents the function that updates the state.
+
+USE- It's commonly used for storing and updating data that affects the component's rendering or behavior, such as input values, toggling UI elements, or tracking user interactions.
+EX- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FuseState.jsx%3A29%2C16
+
+
+2. UseEffect Hooks -
+A. UseEffect is a built-in React hook used in functional components for handling side effects in React applications. 
+   When our component is going to be Render first time OR If there is some update in our component. Then useEffect is going to be called.
+   When we use useEffect then we are requesting react to execute function every time when our componenets render.
+   Its close replacement of a componentDidMount, componentDidUpdate and componentWillUnmount.
+
+USE - It is used for Data Fetching, DOM Manipulation, Managing Timers, Event Listeners.
+Ex- https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseEffect%2FUseEffect.jsx%3A1%2C8-1%2C20
+
+
+3. UseMemo Hooks - 
+A. The useMemo hook helps to optimize performance by remembering or caching the result of a function so that it doesn't recompute the result unless the state change. This can be particularly useful when dealing with expensive calculations or complex data processing in your React components, as it helps prevent unnecessary recalculations and renders.
+
+USE - Sometimes we are changing some states of component and at the same time some unwanted function are also called & we do not want them to be run at that time we can use UseMemo. Because if that function is very and we unwanted calling him again and again so there will be performance issue OR it will take so much time to reload a component. 
+Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseMemo%2FUseMemo.jsx%3A14%2C5
+
+
+4. UseContext Hooks - 
+A. The useContext hook allows a functional component to access data from a parent component and share it with deeply nested child components without the need to pass data through each intermediate component.
+
+USE - The useContext hook in React has resolved the problem of prop drilling, which occurs when you need to pass data through multiple layers of components in order to reach a deeply nested component that requires access to that data.
+      By using useContext, you can access shared data or state directly in any component without the need to pass it down through intermediate components, thus simplifying the component hierarchy and making the codebase cleaner and more maintainable.
+
+Ex - https://codesandbox.io/p/sandbox/basic-practise-rd9g58?file=%2Fsrc%2FUseContext%2FUseContext.jsx%3A11%2C17
+
+
+5. 
+A. 
+
+USE - 
+
+Ex - 
