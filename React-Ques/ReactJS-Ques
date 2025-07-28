@@ -1,7 +1,7 @@
 1. What is ReactJS?
 A. ReactJS is a JavaScript library for building User Interfaces and allows developers to create simple, fast, and scalable web applications.
-   ReactJS Current version - 19.0.[ December 5, 2024 ].
-   ReactJS Previous version - 18.2.0 [ June 14, 2022 ].
+   ReactJS Current version - 19.1.0[ 28 March, 2025 ].
+   ReactJS Previous version - 18.2.0 [ 5 December, 2024 ].
    It is maintained by Facebook.
    Its First Release was 29 May 2013.
 Ex - Component-Based Architecture:
@@ -17,7 +17,7 @@ Ex - Component-Based Architecture:
 
 
 Q. How to create a React App?
-A. npx create-react-app first-proj
+A. npm create vite@latest namaste-react
    NPX is package runner & its getting download when we download node.js.
 
 
