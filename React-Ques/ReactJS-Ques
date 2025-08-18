@@ -226,3 +226,24 @@ A.
 USE - 
 
 Ex - 
+
+
+
+Q. What is Lazy Loading?
+A. Lazy loading = loading components/code only when needed (on demand), instead of loading everything upfront.
+   Why we use it:
+   🔹Reduces initial bundle size → faster first page load.
+   🔹Saves memory & bandwidth (don’t download unused code).
+   🔹Improves performance in large apps with many routes/components.
+
+   If not used:
+   🔹React bundles everything into one big file.
+   🔹Longer load time, higher chance of users leaving before app opens.
+   🔹Wasted resources → user downloads code for pages they may never visit.
+
+   Real-world example (E-commerce):
+   🔹Login page should load instantly.
+   🔹Without lazy loading → Home, Cart, Favorites, Orders, etc. also load at the same time → slow.
+   🔹With lazy loading → only Login loads first. Other pages (Cart/Favorites/Orders) load only when user visits them.
+
+   👉Lazy loading in React means splitting code into chunks and loading components only when required, improving speed and efficiency — especially in big apps like e-commerce.
