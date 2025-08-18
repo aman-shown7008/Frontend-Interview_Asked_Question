@@ -46,7 +46,7 @@ A. Advantages:
 
 
 Q. What is difference b/w DOM and Virtual DOM?-[ Use of this in Real life ].
-A. DOM - [ Documrnt Object Model ]
+A. DOM - [ Document Object Model ]
    Document - HTML Document
    Object - Elements like - h1, p , head
    Model - Compelete Document
