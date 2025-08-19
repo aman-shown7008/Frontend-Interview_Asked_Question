@@ -64,7 +64,15 @@ A. DOM - [ Document Object Model ]
 
 
 Q. What is difference b/w Class Components and Functional Components?
-A. 
+A. | Feature            | Class Components                              | Functional Components      |
+   | ------------------ | --------------------------------------------- | -------------------------- |
+   | **Syntax**         | ES6 Class + `render()` method                 | Simple JavaScript function |
+   | **State Handling** | `this.state`, `this.setState()`               | `useState` Hook            |
+   | **Lifecycle**      | Lifecycle methods (`componentDidMount`, etc.) | `useEffect` Hook           |
+   | **Performance**    | Heavier (before hooks optimization)           | Lighter, faster            |
+   | **Code**           | More boilerplate                              | Cleaner, concise           |
+   | **Modern Use**     | Legacy, rarely used in new apps               | Preferred approach         |
+
 
 
 
