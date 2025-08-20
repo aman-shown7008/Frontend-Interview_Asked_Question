@@ -112,7 +112,14 @@ A.  Library -
 
 
 
-
+6.  If two people build the same website UI — one using semantic tags like <header>, <section>, <article> and the other using only <div> and <span> — is there any difference?
+A.  🔸Meaningful Code → Semantic tags clearly describe the purpose of content, while divs/spans don’t.
+    🔸Accessibility → Screen readers and assistive tools can navigate semantic tags easily; divs need extra roles/attributes.
+    🔸SEO → Search engines understand semantic HTML better, which improves indexing and ranking.
+    🔸Maintainability → Semantic code is easier to read and manage compared to a “div soup.”
+    🔸Default Behavior → Semantic tags come with built-in roles and defaults, divs require manual setup.
+    🔸UI → The UI looks the same to users, but semantic tags provide better structure and long-term benefits.
+    👉In short: “Semantic tags don’t change the UI, but they make the code more accessible, SEO-friendly, and maintainable, while <div> and <span> just act as containers without meaning.”
 
 
 
