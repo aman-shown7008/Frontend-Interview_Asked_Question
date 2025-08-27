@@ -123,7 +123,18 @@ A.  🔸Meaningful Code → Semantic tags clearly describe the purpose of conten
 
 
 
+7.  What is Browser cookie? Use over other storage like Local Storage & Session Storage?
+A.  🔸Local Storage → No expiry by default. Value stays forever (even 10+ years) until user/browser clears it manually.
+    🔸Session Storage → Lasts only while tab/window is open. Cleared when tab is closed.
+    🔸Cookies → Expiry depends on what you set:
+              No expiry → deleted when browser closes (session cookie).
+              Expiry set → lasts until that date (could be years, unless user clears manually).
 
+    Client-only UI state → Local/Session Storage
+    🔸Large structured offline data → IndexedDB
+    🔸Server communication/session → Cookies
+    🔸Caching assets → Cache Storage
+    🔸Files & media → Cloud Storage Buckets
 
 
 
