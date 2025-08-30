@@ -255,3 +255,20 @@ A. Lazy loading = loading components/code only when needed (on demand), instead 
    🔹With lazy loading → only Login loads first. Other pages (Cart/Favorites/Orders) load only when user visits them.
 
    👉Lazy loading in React means splitting code into chunks and loading components only when required, improving speed and efficiency — especially in big apps like e-commerce.
+
+
+
+Q. Tell me d/f b/w calling a child component in this ways?
+A. {/* <InnerComp /> */} - React treats it as a component (with props, hooks, lifecycle).
+   Output - It works perfectly standard way of coding.
+   This tells React:
+   “This is a component, manage it in the tree.”
+   React will track its props, state, hooks, lifecycle, and re-renders properly.
+
+   {/* InnerComp(); */} - Just a normal JS function call returning JSX, not a real React component.
+   Output - It prints only InnerComp(); only 
+   React doesn’t know you meant “component” — it just sees a function returning JSX.
+
+   {InnerComp()} - Same as above, but used inline in JSX to inject the return value.
+   Output - It Prints the return value as State. But we can not use hooks, props, lifecycle method.
+   Since it skipped React’s createElement step, React doesn’t treat it as a real component.
