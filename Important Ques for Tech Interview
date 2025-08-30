@@ -141,6 +141,21 @@ A.  🔸Local Storage → No expiry by default. Value stays forever (even 10+ ye
 
 
 
+8.  Tell me difference b/w Server Side Scripts and Client Side Scripts?
+A.  Client-side scripting: 
+    🔸It handles what the user sees and interacts with in their browser.
+    🔸It runs on the client’s browser (after content is received).
+    🔸Can only access browser resources (DOM, cookies, localStorage).
+    🔸Form validation (before sending to server), Animations, Dropdowns, Autocomplete suggestions.
+    🔸Poor SEO if only client-side (empty HTML first, content loads later).
+
+    Server-side scripting: 
+    🔸It handles what happens behind the scenes on the server to deliver the necessary data and content to the client.
+    🔸It runs on the server (before content is sent to browser).
+    🔸It Can access server resources (databases, files, authentication).
+    🔸More secure (code is hidden from users).
+    🔸Login/Signup validation (server-side), Database queries, Payment processing, API endpoints.
+    🔸Good for SEO → server sends full HTML (search engines can read it).
 
 
 
