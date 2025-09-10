@@ -22,7 +22,7 @@ A. npm create vite@latest namaste-react
 
 
 
-Q. What is the difference between NPX and NPM exec?
+Q. What is the difference between NPX and NPM Exec?
 A. The command npm[ Node Package Manager ]  is used to download JavaScript packages from Node Package Manager, and
    npx[ Node Package Executer] is used to execute JavaScript packages downloaded this way. 
 
