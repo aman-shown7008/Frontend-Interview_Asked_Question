@@ -56,7 +56,7 @@ A. DOM - [ Document Object Model ]
          (e.g., elements, attributes, text).
 
    Virtual DOM - It's a lightweight copy of the actual DOM maintained by the framework. When changes are made to the data in the application, the Virtual DOM is updated instead of directly manipulating the actual DOM. 
-                 Then, a process called reconciliation is used to efficiently update only the parts of the actual DOM that have changed, resulting in improved performance.
+                 Then, a process called reconciliation is used to efficiently update only the parts of the actual DOM that have changed, resulting in improved Performance.
 
    For Ex - In real life, the Virtual DOM allows developers to create dynamic web applications with better performance by minimizing direct manipulation of the actual DOM, which can be slow and resource-intensive.
             This approach leads to smoother user experiences, especially in complex web applications with frequent updates and interactions.
