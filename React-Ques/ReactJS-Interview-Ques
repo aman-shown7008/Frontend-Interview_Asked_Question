@@ -1,0 +1,21 @@
+1.  What is Strict mode in react ?
+A.  StrictMode is a wrapper component in React that helps developers identify potential problems in their applications during development. It does not render anything in the UI but activates additional checks and warnings.
+
+    Use / Purpose-
+    🔹Detects unsafe lifecycle methods.
+    🔹Warns about usage of deprecated APIs.
+    🔹Helps find side effects in components (like double rendering).
+    🔹Ensures best practices are followed for future React versions.
+
+    StrictMode runs only in development, not in production.
+    It’s safe — it won’t break your app, just gives warnings.
+    Recommended to always use it at the root level of your React app.
+
+    Warning that he warns-
+    🔹Double Rendering (Development Only).
+    🔹Unsafe Lifecycle Methods (in class components).
+    🔹Warns if you use old React features that will be removed.
+    🔹All useEffect, useLayoutEffect, and useInsertionEffect hooks are executed twice in development.
+    🔹Helps identify impure rendering logic (like modifying variables, doing API calls directly in render).
+
+    👉React StrictMode is a development-only tool to highlight potential problems (deprecated APIs, side effects, unsafe lifecycles) and enforce best practices.
