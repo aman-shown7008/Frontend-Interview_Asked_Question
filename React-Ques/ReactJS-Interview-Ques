@@ -19,3 +19,37 @@ A.  StrictMode is a wrapper component in React that helps developers identify po
     🔹Helps identify impure rendering logic (like modifying variables, doing API calls directly in render).
 
     👉React StrictMode is a development-only tool to highlight potential problems (deprecated APIs, side effects, unsafe lifecycles) and enforce best practices.
+
+
+
+2.  How would you optimize re-renders when data changes?
+A.     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
