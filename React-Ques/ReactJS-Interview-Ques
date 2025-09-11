@@ -23,9 +23,33 @@ A.  StrictMode is a wrapper component in React that helps developers identify po
 
 
 2.  How would you optimize re-renders when data changes?
-A.     
+A.  Optimizing re-renders in React means making sure components only re-render when necessary. By default, React re-renders whenever props or state change, but sometimes not every component actually needs to update. Optimization helps avoid wasteful rendering and improves performance.
+    Use / Purpose
+    🔹Makes apps faster and smoother, especially large ones.
+    🔹Avoids unnecessary DOM updates.
+    🔹Reduces CPU and memory usage.
+    🔹Helps handle large lists, heavy calculations, or frequent updates efficiently.
 
+    Ways to Optimize-
+    🔹React.memo – Skips re-render if props are the same.
+    🔹useMemo – Caches expensive computations between renders.
+    🔹useCallback – Caches function references to prevent re-renders of children.
+    🔹Splitting State – Keep state as local as possible, avoid lifting too much.
+    🔹Avoid Inline Functions/Objects – They create new references each render.
+    🔹Key Usage in Lists – Use proper unique key to prevent re-renders of unchanged items.
+    🔹Windowing/Virtualization – Render only visible list items (react-window, react-virtualized).
+    🔹Code Splitting/Lazy Loading – Load only what’s needed.
+    🔹Avoid Unnecessary Context Usage – Context re-renders all consumers, so use wisely.
 
+    Depth Explanation
+    🔹React’s default rendering is reconciliation-based: when state/props change, React re-renders and diffs the virtual DOM.
+    🔹If many components re-render unnecessarily, performance drops.
+    🔹Shallow comparison (done by React.memo) is key — if props haven’t changed, no re-render.
+    🔹Expensive calculations (e.g., sorting, filtering, heavy loops) should be cached with useMemo.
+    🔹Functions are re-created on each render; passing them to children causes re-renders → fix with useCallback.
+    🔹Context re-renders all consumers; avoid putting frequently changing values there.
+    🔹For huge lists (e.g., 10k items), don’t render all → use windowing so only visible items render.
+    🔹In React 18+, React’s automatic batching reduces re-renders by grouping updates together.
 
 
 
