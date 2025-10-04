@@ -52,6 +52,8 @@ A.  Redux is a state management library for JavaScript applications. It helps ma
    🔹 Social media apps (Likes, Comments)
    🔹 Dashboards (User Analytics, Reports)
    🔹 Large-scale web applications
+    Use-Case - 
+    When in multiple components there is use of the same state.
 
 
 
