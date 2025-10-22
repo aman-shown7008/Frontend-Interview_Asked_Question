@@ -100,7 +100,8 @@ For Ex- CartSlice - Add Data, Remove Data for Cart. In this [ Add, Remove ] is R
 
 
 We create 1 folder Store/ -> cartSlice -> Reducer[ add, remove ]; then export. -> Then use different Slice on Store.js from register & use that Slice.
-useDispatch
+useDispatch - By this we can trigger Or send some data to the reducer that we have created to perform some action.
+useSelector - By this we can get whole application state & by that if we want particular state then we can OR some changed state. Solution of prop-drilling is this. we can get any state from any where in our project.
 
 
 
