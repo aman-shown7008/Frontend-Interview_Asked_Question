@@ -91,7 +91,16 @@ A.  Redux Toolkit simplifies Redux by providing built-in utilities. Here are the
 
 
 
+Slice - By this we can organize our data in small small pieces.
+Reducers - It is basically a function by that if we want to mutate/change our state so we can.
+           It is also a pure function. & Pure function are those that are not going to change data outside of function.
+Action - It is used to get the payload.
+Store - It Basically contains group of Reducers of particular Slice. 
+For Ex- CartSlice - Add Data, Remove Data for Cart. In this [ Add, Remove ] is Reducer.
 
+
+We create 1 folder Store/ -> cartSlice -> Reducer[ add, remove ]; then export. -> Then use different Slice on Store.js from register & use that Slice.
+useDispatch
 
 
 
