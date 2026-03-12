@@ -1,1 +1,18 @@
+Hooks-
 
+1.  UseState - 
+A.  const [count, setCount] = useState(0); 
+    <button onClick={() => setCount(count + 1)}>Do-Changes</button>
+    In this - 
+    When we declare top state then on React-Fiber memory our count is created like this - const state = { value : 0 };
+    Then when we have called setCount(count + 1) then our Func get called to store/update value of count -> 
+    function setState(prevValue){
+        state.value = count + 1; 
+        //After this change react component re-renders
+    }
+    By changing state our component our get re-render.
+    When we change state at that time new Virtual-dom gets created & it is going compare [ new Virtual DOM vs previous Virtual DOM ] only necessay part gets updated by diff-algorithim-[Finds differences]. 
+
+
+2.  UseEffect - 
+    
