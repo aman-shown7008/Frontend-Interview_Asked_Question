@@ -63,3 +63,11 @@ A.  Root Files
     Ex: Allow images only from unsplash.com.
     🔹jsconfig.json → GPS system 🧭; helps with path shortcuts in imports.
     Ex: Import @components/Button instead of long ../../components/Button.
+
+
+
+
+
+
+Q.  What is NextJS? Why we use over ReactJS?
+A.  
