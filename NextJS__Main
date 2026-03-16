@@ -1,2 +1,97 @@
-1.   What is NextJS? And why we use it over ReactJS?
-A.   
+1.  What is NextJS? And why we use it over ReactJS?
+A.  1️⃣  What is Next.js?
+    Next.js is a React framework used to build modern web applications.
+    It is built on top of ReactJS
+    It extends React by providing built-in features and project structure.
+    Helps developers build scalable and optimized applications.
+    👉 In simple terms:
+    React = UI Library
+    Next.js = Framework built on React
+    React helps create UI components, while Next.js provides complete application architecture.
+    
+    2️⃣ Why Use Next.js Instead of React?
+    When using React alone, developers must install and configure many libraries manually.
+    Example in React:
+    🔹Routing → npm i react-router-dom
+    🔹Build tools → npm i webpack
+    🔹SEO handling
+    🔹Performance optimization
+    🔹API handling
+    🔹Next.js already provides many of these features out of the box.
+
+    3️⃣ Built-in Features of Next.js
+    1. File-Based Routing
+    Routing is automatically handled by the file structure.
+    Example-> app/about/page.tsx
+    This automatically creates the route:
+    /about
+    No need for react-router-dom.
+
+    2. Server-Side Rendering (SSR)
+    Next.js can render pages on the server before sending them to the browser.
+    Flow:
+    Server → Render HTML → Send to Browser
+    Benefits:
+    🔹Better SEO
+    🔹Faster first page load
+    🔹Better performance
+
+    3. Built-in Optimization
+    Next.js automatically optimizes many things:
+    🔹Image optimization ->
+    ReactJS - 
+    No automatic resizing.
+    No modern formats. [ Original → PNG/JPG/JPEG ].
+    No lazy loading by default. [ All Images in one go ].
+    NextJS -
+    Automatic Resizing - [ Desktop → 1000px, Tablet → 600px, Mobile → 300px ].
+    Next.js converts images. [ Served → WebP/AVIF (smaller size) ]. Result → faster loading.
+    Images outside the viewport are not loaded until the user scrolls. This improves page speed.
+    🔹Code splitting -> 
+    ReactJS- [ Implement manually ]
+    const Page = React.lazy(() => import("./Page"));
+    NextJS -
+    When a user visits /about, only the about code loads.
+    🔹Font optimization
+    🔹Caching
+    🔹Faster page loading
+    Example optimized image component:
+    import Image from "next/image";
+    <Image src="/profile.png" width={500} height={500} alt="Picture of the author" />
+
+    4. Middleware
+    Middleware allows code to run before a request is completed. It runs between the user request and the server response.
+    Ex - User → /dashboard
+           ↓
+         Middleware checks token
+           ↓
+         No token → redirect to /login
+         Has token → allow access
+    Common uses:
+    🔹Authentication
+    🔹Redirect users
+    🔹Logging
+    🔹Security checks
+
+    5. CSS Support
+    Next.js supports multiple styling methods without configuration.
+    Supported options:
+    🔹CSS
+    🔹CSS Modules
+    🔹Sass
+    🔹Tailwind CSS
+    🔹Styled Components
+
+    4️⃣ Next.js Can Be Full-Stack - 
+    Next.js allows building frontend and backend in the same project.
+    You can create APIs inside the project.
+    Example structure-> app/api/users/route.ts
+    API URL-> /api/users
+
+    5️⃣ Benefits of Next.js
+    🔹Faster development
+    🔹Built-in routing
+    🔹Better SEO
+    🔹Automatic optimization
+    🔹Backend API support
+    🔹Scalable architecture
