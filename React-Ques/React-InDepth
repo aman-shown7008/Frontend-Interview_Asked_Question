@@ -12,7 +12,16 @@ A.  const [count, setCount] = useState(0);
     }
     By changing state our component our get re-render.
     When we change state at that time new Virtual-dom gets created & it is going compare [ new Virtual DOM vs previous Virtual DOM ] only necessay part gets updated by diff-algorithim-[Finds differences]. 
-
+    React UI updates only when state changes.
+    Updating a normal JavaScript variable changes the value in memory, but React does not detect it, so the component does not re-render.
+    useState is used to store data that should update the UI.
+    Why Normal Variable Doesn't Update UI
+    let newData = "Namaste Next-JS";
+    Changing this variable:
+    newData = "Button Clicked-2";
+    Updates value in JavaScript engine
+    Console shows updated value
+    UI does NOT update because React does not track it.
 
 2.  UseEffect - 
     
