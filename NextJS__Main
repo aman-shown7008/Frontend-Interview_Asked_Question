@@ -95,3 +95,58 @@ A.  1️⃣  What is Next.js?
     🔹Automatic optimization
     🔹Backend API support
     🔹Scalable architecture
+
+
+
+2.  
+A.  1️⃣ Component in Next.js
+    A component is a reusable piece of UI that returns JSX (HTML-like code).
+    Example:
+    export default function Page() {
+      return <h1>Hello World</h1>
+    }
+    A component always returns JSX that is rendered on the webpage.
+
+    2️⃣ Function vs Component
+           Function	                                Component
+    🔹May or may not return a value.            Always returns JSX.
+    🔹Used for logic.	                        Used to create UI.
+    Example function ->
+    function add(a, b) {
+      return a + b
+    }
+    Example component ->
+    function Header() {
+      return <h1>Hello</h1>
+    }
+
+    3️⃣ Default Export
+    If a component is exported as default, import without {}.
+    Example:
+    export default function abc() {}
+    import abc from "./abc".
+
+    4️⃣ Named Export
+    If exported normally, import using {}.
+    Example:
+    export function abc() {}
+    import { abc } from "./abc"
+
+    5️⃣ () vs {} in Components
+    1. Parentheses () -> Automatically return JSX.
+    const Page = () => (
+      <h1>Hello</h1>
+    )
+    2. Curly Braces {} -> Need to write return.
+    const Page = () => {
+      return <h1>Hello</h1>
+    }
+
+    6️⃣ TypeScript vs JavaScript
+    JavaScript (Dynamic typing)
+    let age = 25
+    TypeScript (Static typing)
+    let age: number = 25
+    TypeScript requires defining the data type.
+    Browsers cannot understand TypeScript directly.
+    Process -> TypeScript → Converted to JavaScript → Browser runs it
