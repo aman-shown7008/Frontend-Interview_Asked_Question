@@ -605,4 +605,83 @@ A.
 
 
 
+Q.  What is Event Bubbling?
+A.  👉 When you click a child element, the event also goes to its parent.
+    <div id="parent" style="padding:20px; background:lightblue;">
+      Parent
+      <button id="child">Click Me</button>
+    </div>
+
+    <script>
+      document.getElementById("parent").onclick = () => {
+        console.log("Parent clicked");
+      };
+
+      document.getElementById("child").onclick = () => {
+        console.log("Button clicked");
+      };
+    </script>
+
+
+
+Q.  What is Event Capturing?
+A.  Event goes from parent → child. (opposite of bubbling).
+    <div id="parent" style="padding:20px; background:lightgreen;">
+      Parent
+      <button id="child">Click Me</button>
+    </div>
+
+    <script>
+      document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent clicked");
+      }, true); // 👈 true = capturing
+
+      document.getElementById("child").addEventListener("click", () => {
+        console.log("Button clicked");
+      });
+    </script>
+
+
+
+Q.  What is Event Delegation?
+A.  👉 Instead of adding event to many children, we add ONE event to parent.
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <script>
+      document.getElementById("list").addEventListener("click", (e) => {
+        console.log(e.target.textContent);
+      });
+    </script>
+
+
+
+Q.  What is this Keyword?
+A.  this refers to the object that is calling the function.
+    <script>
+      const user = {
+        name: "Aman",
+        show: () => {
+          console.log(this.name);
+        }
+      };
+      user.show();
+    </script>
+
+
+
+Q.  
+
+
+
+
+
+
+
+
+
+
 
