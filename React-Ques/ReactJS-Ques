@@ -272,3 +272,17 @@ A. {/* <InnerComp /> */} - React treats it as a component (with props, hooks, li
    {InnerComp()} - Same as above, but used inline in JSX to inject the return value.
    Output - It Prints the return value as State. But we can not use hooks, props, lifecycle method.
    Since it skipped React’s createElement step, React doesn’t treat it as a real component.
+
+
+
+Q. Stale Clouser - 
+A. The effect captures old state because dependency array is missing a variable.
+    useEffect(() => {
+      setInterval(() => {
+        console.log(count); // ❗ old value
+      }, 1000);
+    }, []); // count missing → stale closure
+
+
+
+
