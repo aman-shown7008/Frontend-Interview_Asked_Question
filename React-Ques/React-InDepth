@@ -10,7 +10,7 @@ A.  const [count, setCount] = useState(0);
         state.value = count + 1; 
         //After this change react component re-renders
     }
-    By changing state our component our get re-render.
+    By changing state our component get re-render.
     When we change state at that time new Virtual-dom gets created & it is going compare [ new Virtual DOM vs previous Virtual DOM ] only necessay part gets updated by diff-algorithim-[Finds differences]. 
     React UI updates only when state changes.
     Updating a normal JavaScript variable changes the value in memory, but React does not detect it, so the component does not re-render.
