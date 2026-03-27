@@ -1,0 +1,7 @@
+Q.  What is Kadane Algorithim?
+A.  Kadane’s algorithm focuses on whether to continue the current subarray or start a new subarray.
+    | Choice             | Meaning                             |
+    | ------------------ | ----------------------------------- |
+    | Start new subarray | Take current element only           |
+    | Continue subarray  | Add current element to previous sum |
+    currentSum = Math.max(nums[i], currentSum + nums[i]);
