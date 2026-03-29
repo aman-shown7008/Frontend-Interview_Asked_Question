@@ -17,7 +17,7 @@ A. Pseudo-elements allows us to create items that do not normally exist in the d
 2. Explain me Different Box Sizing Property?
 
 A. Here's how it affects layout:
-•  When using box-sizing: content-box, if you set a width of, say, 300px on an element and add 20px padding, the total width will be 320px (300px + 20px padding on each side).
+•  When using box-sizing: content-box, if you set a width of, say, 300px on an element and add 20px padding, the total width will be 340px (300px + 20px padding on each side).
 •  When using box-sizing: border-box, if you set a width of 300px on an element with 20px padding, the total width will remain 300px. The padding will be included within the specified width.
 
 
