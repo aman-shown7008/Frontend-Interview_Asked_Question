@@ -285,4 +285,28 @@ A. The effect captures old state because dependency array is missing a variable.
 
 
 
+Q. 
+A.  🔹Controlled Component
+     👉Input is controlled by React state
+    Value comes from state
+    Updated using onChange
+    Used for form validation, real-time updates
+    Controlled component = React controls input via state (value + onChange).
+
+    🔹Uncontrolled Component
+    👉Input is controlled by DOM (browser)
+    Value stored in DOM
+    Access using useRef
+    No real-time control
+    Uncontrolled component = DOM controls input, React accesses it using ref
+
+
+
+
+
+
+
+
+
+
 
