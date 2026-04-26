@@ -1,0 +1,25 @@
+For the UI Developer - https://mail.google.com/mail/u/0/#inbox/FMfcgzQgLFrBMwZJTHJKWvWZLkzTcNWR - [04/ 09/ 2026] - NeurealmNeurealm
+1.  Create one static method as Map by Prototype = 
+A.  let arr = [1, 2, 3, 4, 5];
+    Array.prototype.amanMap = function (callback) {
+      let result = [];
+      for (let i = 0; i < this.length; i++) {
+        result.push(callback(this[i], i, this));
+      }
+      return result;
+    };
+    let num = arr.amanMap((val) => val * 2);
+    console.log(num); // [2, 4, 6, 8, 10]
+
+2.  What is Debouncing & Implement it.
+A.  let timer;
+    const debouncing = (fn, delay) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn();
+      }, delay);
+    };
+
+3.  Create One Custom Hook of Count in ReactJS?
+A.  https://stackblitz.com/edit/vitejs-vite-cosxpnh7?file=src%2FApp.jsx,src%2FCount.jsx&terminal=dev
+
