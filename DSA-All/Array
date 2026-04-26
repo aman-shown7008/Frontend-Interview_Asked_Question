@@ -1,0 +1,136 @@
+// Q.  What is an Array?
+// A.  let arr = [1, 2, 3];
+//     But internally:
+//     👉 JS arrays are dynamic, resizable, ordered objects
+//     👉 Indexed with 0-based indexing
+//     👉 Not fixed-size like C++
+
+//     Under the hood:
+//     🔹V8 (JS engine) optimizes arrays as contiguous memory (like C++) until you break it.
+//     🔹If you insert weird stuff → becomes hash map-like structure.
+    
+//     Example:
+//     let arr = [1, 2, 3];
+//     arr[100] = 5; // sparse array
+//     // V8 internally treats it like:
+//     {
+//       0: 1,
+//       1: 2,
+//       2: 3,
+//       100: 5
+//       // indices 3–99 don't exist at all in memory
+//     }
+//     console.log(arr.length);      // 101
+//     console.log(arr[3]);          // undefined (not stored)
+//     console.log(3 in arr);        // false ✅ (key doesn't exist)
+//     console.log(100 in arr);      // true  ✅ (key exists)
+//     console.log(0 in arr);        // true  ✅
+//     V8 doesn't waste memory filling 3–99 with undefined. It just switches the array to a dictionary/hash-map structure and only stores real values. The "holes" are just the absence of key
+
+//     2. Ways to Create Arrays
+//        1. Literal (most common)
+//           let arr = [1, 2, 3];
+//        2. Constructor
+//           let arr = new Array(5); // [empty × 5]
+//        ⚠️ Trap:
+//           new Array(5) !== [5]
+//        3. From method
+//           let arr = Array.from("abc"); // ['a','b','c']
+//        4. Fill method
+//           let arr = new Array(5).fill(0); // [0,0,0,0,0]
+//        5. Spread
+//           let arr = [..."hello"];
+//        6. Dynamic (push-based)
+//           let arr = [];
+//           arr.push(1);
+//     3. Ways to Iterate (VERY IMPORTANT)
+//        1. Classic loop (fastest)
+//           for (let i = 0; i < arr.length; i++) {}
+//           👉 Best for competitive programming
+//         2. for...of
+//           for (let val of arr) {}
+//           👉 Clean but no index
+//         3. forEach
+//            arr.forEach((val, idx) => {});
+//            ⚠️ Can't break/continue
+//         4. map (transformation)
+//            let res = arr.map(x => x * 2);
+//         5. filter
+//            arr.filter(x => x > 0);
+//         6. reduce (VERY POWERFUL)
+//            arr.reduce((acc, val) => acc + val, 0);
+//            👉 Used in prefix sums, counting, hashing patterns
+ 
+//     4. Built-in Methods 
+//        let num = [1, 2, 3, 4, 5];
+//        1. num.push(6); // [1,2,3,4,5,6] -> O(1) This adds the specified elements to the end of an array and returns the new length of the array.
+//        2. num.pop();   // [1,2,3,4,5] -> O(1) This removes the last element from an array and returns that element.
+//        3. num.shift(); // [2,3,4,5] -> O(n) This removes the first element from an array and returns that element. All other elements are shifted to a lower index.
+//        4. num.unshift(0); // [0,2,3,4,5] -> O(n) This adds one or more elements to the beginning of an array and returns the new length of the array. All existing elements are shifted to a higher index.
+//        5. num.slice(1, 4); // [2,3,4] -> O(k) This returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included). The original array will not be modified.
+//        6. num.splice(1, 2, 8, 9); // [0,8,9,4,5] -> O(n) This changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. The first parameter is the start index, the second is the number of elements to remove, and the rest are the elements to add.
+//        7. num.indexOf(3); // 3 -> O(n) This returns the first index at which a given element can be found in the array, or -1 if it is not present.
+//        8. num.includes(4); // true -> O(n) This determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+//        9. num.sort((a, b) => a - b); // [0,4,5,8,9] -> O(n log n) This sorts the elements of an array in place and returns the sorted array. The default sort order is built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. To sort numbers correctly, you need to provide a compare function.
+//        10. num.reverse(); // [9,8,5,4,0] -> O(n) This reverses an array in place. The first array element becomes the last, and the last becomes the first.
+//        11. num.join(","); // "9,8,5,4,0" -> O(n) This joins all elements of an array into a string and returns this string. You can specify a separator (default is comma).
+//        12. num.concat([10, 11]); // [9,8,5,4,0,10,11] -> O(n) This is used to merge two or more arrays. This method does not change the existing arrays but instead returns a new array.
+//        13. num.length; // 7 -> O(1) This property represents the length of the array. It is one more than the highest index in the array. Note that if you set num.length to a smaller value, it will truncate the array. If you set it to a larger value, it will create empty slots (holes) in the array.
+//        14. num.fill(0); // [0,0,0,0,0,0,0] -> O(n) This fills all the elements of an array from a start index to an end index with a static value. The end index is not included. If you don't specify start and end, it fills the entire array.
+//        15. num.flat(); // [0,0,0,0,0,0,0] -> O(n) This creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The default depth is 1.
+//        16. num.flatMap(x => [x, x * 2]); // [0,0,0,0,0,0,0] -> O(n) This first maps each element using a mapping function, then flattens the result into a new array. It is identical to a map followed by a flat of depth 1.
+//       17. num.some(x => x > 0); // false -> O(n) This tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+//       18. num.every(x => x === 0); // true -> O(n) This tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+//       19. num.find(x => x > 0); // undefined -> O(n) This returns the value of the first element in the array that satisfies the provided testing function. Otherwise, it returns undefined.
+//       20. num.findIndex(x => x > 0); // -1 -> O(n) This returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1.
+//       21. num.findLast(x => x > 0); // undefined -> O(n) This returns the value of the last element in the array that satisfies the provided testing function. Otherwise, it returns undefined.
+//       22. num.findLastIndex(x => x > 0); // -1 -> O(n) This returns the index of the last element in the array that satisfies the provided testing function. Otherwise, it returns -1.
+//       23. num.lastIndexOf(0); // 6 -> O(n) This returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.  
+//       24. num.reduceRight((acc, val) => acc + val, 0); // 0 -> O(n) This applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
+//       25. num.toString(); // "0,0,0,0,0,0,0" -> O(n) This returns a string representing the specified array and its elements. The elements are converted to strings and separated by commas.
+//       26. num.valueOf(); // [0,0,0,0,0,0,0] -> O(1) This returns the primitive value of the specified object. For arrays, it returns the array itself.
+//       27. num.copyWithin(0, 3, 5); // [0,0,0,0,0,0,0] -> O(n) This method shallow copies part of an array to another location in the same array and returns it without modifying its length. The first parameter is the target index to copy to, the second is the start index to copy from, and the third is the end index (not included) to copy from.
+//       28. num.entries(); // Array Iterator {0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0} -> O(1) This returns a new Array Iterator object that contains the key/value pairs for each index in the array. You can use it with a for...of loop to iterate over both indices and values.
+//       29. num.keys(); // Array Iterator {0, 1, 2, 3, 4, 5, 6} -> O(1) This returns a new Array Iterator object that contains the keys for each index in the array. You can use it with a for...of loop to iterate over indices.
+//       30. num.values(); // Array Iterator {0, 0, 0, 0, 0, 0, 0} -> O(1) This returns a new Array Iterator object that contains the values for each index in the array. You can use it with a for...of loop to iterate over values.
+//       31. num.flat(Infinity); // [0,0,0,0,0,0,0] -> O(n) This flattens the array recursively until there are no more nested arrays. It is useful for deeply nested arrays.
+//       32. num.at(-1); // 0 -> O(1) This method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
+//       33. num.toLocaleString(); // "0,0,0,0,0,0,0" -> O(n) This returns a string representing the elements of the array. The elements are converted to strings using their toLocaleString methods and separated by commas.
+//       34. num.toReversed(); // [0,0,0,0,0,0,0] -> O(n) This returns a new array with the elements in reverse order. The original array is not modified.
+//       35. num.toSorted((a, b) => a - b); // [0,0,0,0,0,0,0] -> O(n log n) This returns a new array with the elements sorted. The original array is not modified. You can provide a compare function to sort numbers correctly.
+//       36. num.toSpliced(1, 2, 8, 9); // [0,8,9,0,0,0,0] -> O(n) This returns a new array with the specified elements removed and/or added. The original array is not modified. The parameters are the same as splice: start index, number of elements to remove, and elements to add.
+//       37. num.with(1, 8); // [0,8,0,0,0,0,0] -> O(n) This returns a new array with the element at the specified index replaced by a new value. The original array is not modified. The parameters are the index to replace and the new value.
+//       //These 4 methods were added in ES2023 specifically to support immutable programming.
+//       38. num.map((x, i) => x + i); // [0,1,2,3,4,5,6] -> O(n) This creates a new array populated with the results of calling a provided function on every element in the calling array. The function takes the current value and the index as parameters.
+//       39. num.filter(x => x > 0); // [] -> O(n) This creates a new array with all elements that pass the test implemented by the provided function. The function takes the current value as a parameter.
+//       40. num.reduce((acc, x) => acc + x, 0); // 0 -> O(n) This applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value. The function takes the accumulator and the current value as parameters, and the second argument is the initial value of the accumulator.
+//       41. Array.isArray(num); // true -> O(1) This method determines whether the passed value is an Array. It returns true if the value is an Array, and false otherwise.
+//       42. Array.from(num); // [0,0,0,0,0,0,0] -> O(n) This method creates a new Array instance from an array-like or iterable object. It can also take a mapping function as a second argument to transform the elements.
+//       43. Array.of(1, 2, 3); // [1,2,3] -> O(n) This method creates a new Array instance with a variable number of arguments, regardless of the number or type of the arguments. It is different from the Array constructor when you pass a single number as an argument.
+//       44. Array.prototype; // Array.prototype -> O(1) This is the prototype object of the Array constructor. It contains all the methods that are available to array instances. You can add your own methods to this prototype to extend the functionality of arrays.
+//       45. num.forEach((x, i) => console.log(x, i)); // logs each element and index -> O(n) This method executes a provided function once for each array element. The function takes the current value and the index as parameters. Note that you cannot break or continue in a forEach loop.
+
+
+// Some Array Travesing-Techniques:
+// 1.  Two Pointers-
+//     Use two indices to traverse an array (or string, or linked list) simultaneously. Instead of an O(n²) nested loop that checks every pair, two pointers reduce the work to a single O(n) pass — each element is visited at most once.
+//     The trick: the data must have a monotone property (usually sortedness) so you know which pointer to advance at each step.
+
+//     The 3 strategies -
+//     ↔ Opposite ends
+//     Left starts at index 0, right at n−1. They march inward. Move left when you need a bigger value, right when you need smaller.
+//     Use when: find a pair/triplet, reverse in-place, water container.
+//     Ex- left = 0, right = arr.length - 1;
+//     167. Two Sum II - Input Array Is Sorted
+
+//     →→ Slow / fast
+//     Both start at the beginning. Fast advances ahead of slow. The gap between them captures something useful.
+//     Use when: find middle of list, detect cycle, remove duplicates, sliding window.
+//     Ex- slow = 0, fast = 0; while (fast < arr.length) { if (arr[slow] !== arr[fast]) { slow++; arr[slow] = arr[fast]; } fast++; }
+//     876. Middle of the Linked List
+
+//     ⇒⇒ Independent
+//     One pointer per sequence. Always advance the pointer at the smaller element.
+//     Use when: merge two sorted arrays, intersection of two lists.
+//     Ex- i = 0, j = 0; while (i < arr1.length && j < arr2.length) { ... };
+//     88. Merge Sorted Array

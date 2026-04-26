@@ -671,6 +671,52 @@ A.  this refers to the object that is calling the function.
       user.show();
     </script>
 
+    2 — Strict mode vs non-strict mode
+           Strict mode                                             Non-strict mode
+    this inside a plain function = undefined                     this substitution applies
+    x() → undefined                                             If this is undefined / null →
+    window.x() → window                                         replaced by globalObject (window)
+
+    3 — this in a regular function (standalone)
+    function x() {                     |     call as x()
+      console.log(this);            -> |     undefined (strict)
+    }    
+                                  |     window (non-strict)
+    4 — this in a method (regular function inside object)
+    const obj = {                      |     obj.x() prints:
+      a: 10,                           |
+      x: function() {                  |
+        console.log(this);             |     { a: 10, x: ƒ } = the object itself
+      }                                |
+    };                                 |
+    Rule: value of this depends on HOW the function is called, not where it's defined.
+
+    5 — this in an arrow function (inside object literal)
+    const obj = {                      |  output:
+      a: 10,                           |
+      x: () => {                       |    window (browser)
+        console.log(this);             |    undefined (strict)
+      }                                |
+    };                                 |
+    obj.x();                           |
+    Why? — Lexical scope chain
+    Global scope → this = window (captured here) 
+    obj = { } — object literal, NOT a new scope
+    x: () => { this }
+    no own this → looks past obj → inherits from global scope
+    Arrow functions have NO own this — they inherit it lexically from the enclosing scope
+    
+    6 — Arrow function INSIDE a method (the useful pattern)
+    const obj = {                         |       Step 1: obj.x() called as method
+      a: 10,                              |       this = obj ✓
+      x: function() {                     |       
+        const y = () => {                 |       Step 2: y is arrow → inherits
+          console.log(this);              |       this from x = obj ✓
+        };                                |
+        y();                              |       Output: { a: 10, x: ƒ }
+      }                                   |
+    }; obj.x();                           |
+    Use arrow functions inside methods to preserve the method's this.
 
 
 Q.  
