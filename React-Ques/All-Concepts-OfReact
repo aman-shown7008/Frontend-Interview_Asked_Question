@@ -15,8 +15,19 @@ A.  package.json -
 
 
 Q.  What is node_modules?
-A.  node_modules -
-    node_modules is the folder that stores all installed npm packages, including direct and transitive (sub) dependencies.
+A.  node_modules is the folder that stores all installed npm packages, including direct and transitive (sub) dependencies.
+
     When we run:
-    npm install axios:
-    npm installs axios and its required sub-packages, then stores all those package files inside node_modules.
+    npm install axios
+    npm installs axios along with its required sub-packages and stores all those package files inside node_modules.
+    Each installed dependency inside node_modules also contains its own package.json file, because every package is itself a separate Node.js project/package.
+
+
+
+Q.  What is the use of .gitignore?
+A. .gitignore is used to tell Git which files or folders should not be tracked or pushed to the repository.
+    It is commonly used to ignore:
+    - node_modules/
+    - environment files (.env)
+    - build/generated files
+    - logs or temporary files
