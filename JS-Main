@@ -1,3 +1,61 @@
 1.  What is Hoisting? Uses.
 A.  Hoisting is a mechanism by that if we want to access any variable or function before its declaration so we can.
     But only with var & normal function not with let, const, arrow Function becz 
+
+
+
+2. 
+A.  Correct flow:
+    JavaScript
+     JS Code
+       ↓
+    Parsed + JIT compiled/interpreted by engine (like V8)
+       ↓
+    Runs in browser/node
+       ↓
+    Type checking happens while running (Runtime)
+    Example:
+    let a = 10;
+    a = "Hello"; // allowed at runtime
+    JavaScript engine checks values during execution.
+
+    TypeScript
+    TS Code
+      ↓
+    Compile Time Checking
+      ↓
+    Converted (transpiled) into JavaScript
+      ↓
+    JavaScript runs
+    Example:
+    let a: number = 10;
+
+    Important thing:
+    TypeScript does not convert directly into binary.
+    It first converts into JavaScript:
+    TypeScript → JavaScript → Machine-level execution
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = "Hello"; // compile-time error
+
+TypeScript checks types before the code runs.
