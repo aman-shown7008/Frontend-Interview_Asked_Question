@@ -1,1 +1,12 @@
-Q.  
+Q.  D/f b/w Package.json OR Package.lock.json ?
+A.  package.json - 
+    Stores the direct dependencies and project configuration required for the application.
+    "react": "^18.2.0"
+    Uses version ranges (^, ~) so npm can install compatible newer versions.
+
+    package-lock.json
+    Stores the exact installed version of every package, including all sub-dependencies (nested dependencies).
+    "react": {
+      "version": "18.2.0"
+    }
+    Ensures same dependency installation for every developer/system by locking the complete dependency tree.
