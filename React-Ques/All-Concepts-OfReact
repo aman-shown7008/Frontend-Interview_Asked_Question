@@ -31,3 +31,19 @@ A. .gitignore is used to tell Git which files or folders should not be tracked o
     - environment files (.env)
     - build/generated files
     - logs or temporary files
+
+
+
+
+Q.  Difference between npm and npx?
+A.  npm:
+    1. npm (Node Package Manager) is used to install and manage packages.
+    2. It permanently installs packages into node_modules.
+    Example:
+    npm install react
+
+    npx:
+    1. npx (Node Package Execute) is used to directly run packages without permanently installing them.
+    2. It executes the package temporarily.
+    Example:
+    npx create-react-app my-app
