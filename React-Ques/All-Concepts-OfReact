@@ -1,12 +1,22 @@
 Q.  D/f b/w Package.json OR Package.lock.json ?
 A.  package.json - 
-    Stores the direct dependencies and project configuration required for the application.
+    🔹Stores the direct dependencies and project configuration required for the application.
     "react": "^18.2.0"
-    Uses version ranges (^, ~) so npm can install compatible newer versions.
+    🔹Uses version ranges (^, ~) so npm can install compatible newer versions.
 
     package-lock.json
-    Stores the exact installed version of every package, including all sub-dependencies (nested dependencies).
+    🔹Stores the exact installed version of every package, including all sub-dependencies (nested dependencies).
     "react": {
       "version": "18.2.0"
     }
-    Ensures same dependency installation for every developer/system by locking the complete dependency tree.
+    🔹Ensures same dependency installation for every developer/system by locking the complete dependency tree.
+
+
+
+
+Q.  What is node_modules?
+A.  node_modules -
+    node_modules is the folder that stores all installed npm packages, including direct and transitive (sub) dependencies.
+    When we run:
+    npm install axios:
+    npm installs axios and its required sub-packages, then stores all those package files inside node_modules.
