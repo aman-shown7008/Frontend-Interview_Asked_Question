@@ -37,25 +37,40 @@ A.  Correct flow:
 
 
 
+3.  What is Spread & Rest Operator in JavaScript?
+A.  The Spread Operator (...) is used to expand/spread elements of an array, object, or string into individual values.
+    Syntax-
+    ...data
+    Uses
+    1. Merge Arrays
+    let a = [1,2];
+    let b = [3,4];
+    let c = [...a, ...b];
+    console.log(c); // [1,2,3,4]
 
+    2. Copy Array
+    let arr = [1,2,3];
+    let copy = [...arr];
+    console.log(copy); // [1,2,3]
 
+    3. Pass Array as Function Arguments
+    function demo(x,y,z){
+      console.log(x,y,z);
+    }
+    let nums = [10,20,30];
+    demo(...nums);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a = "Hello"; // compile-time error
-
-TypeScript checks types before the code runs.
+    Rest Operator -
+    The Rest Operator (...) is used to collect multiple values into a single array.
+    Syntax-
+    ...data
+    Uses
+    1. Function Parameters
+    function demo(...args){
+      console.log(args);
+    }
+    demo(1,2,3,4);
+    // [1,2,3,4]
+    2. Remaining Elements
+    let [a, ...rest] = [1,2,3,4];
+    console.log(rest); // [2,3,4]
