@@ -74,3 +74,18 @@ A.  The Spread Operator (...) is used to expand/spread elements of an array, obj
     2. Remaining Elements
     let [a, ...rest] = [1,2,3,4];
     console.log(rest); // [2,3,4]
+
+
+
+4.  What is Destructuring? Uses.
+A.  Destructuring is an ES6 feature that allows us to extract (unpack) values from objects or arrays and assign them to variables in a single step.
+   🔹Ex:
+    const user = { name: "Aman", age: 23 };
+    const { name, age } = user;
+    console.log(name, age);
+
+    const colors = ['red', 'green', 'blue'];
+    const [first, second] = colors; // first = 'red', second = 'green'
+
+    💡One-line interview version:
+    👉“Destructuring is used to unpack values from arrays or objects into variables in a concise way.”
